@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vincy Vibes: a fun guide to St. Vincent and the Grenadines</title>
+  <meta name="description" content="Unofficial guide to St. Vincent and the Grenadines: islands, map with GPS, approved taxis, ferry times and flights.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="index.html"><svg viewBox="0 0 30 30" aria-hidden="true"><path fill="#009E60" d="M8 3l4.5 7L8 17l-4.5-7z"/><path fill="#009E60" d="M22 3l4.5 7L22 17l-4.5-7z"/><path fill="#009E60" d="M15 13l4.5 7L15 27l-4.5-7z"/></svg>Vincy Vibes</a>
+    <nav class="nav" aria-label="Main"><a href="index.html" aria-current="page">Home</a><a href="islands.html">Islands</a><a href="map.html">Map</a><a href="taxis.html">Taxis</a><a href="ferries.html">Ferries</a><a href="getting-here.html">Getting here</a></nav>
+  </div>
+</header>
+<main>
+
+<div class="wrap">
+  <section class="hero" aria-labelledby="hero-title">
+    <div>
+      <h1 id="hero-title">Thirty-two islands, one ferry ride at a time.</h1>
+      <p class="lede">A fun, unofficial guide to St. Vincent and the Grenadines: where to go, how to get between the islands, and who to call for a ride.</p>
+      <div class="hero-actions">
+        <a class="btn" href="map.html">Open the map</a>
+        <a class="btn btn-quiet" href="islands.html">Meet the islands</a>
+      </div>
+    </div>
+    <div>
+      <ol class="chain" id="chain" aria-label="Islands from north to south"></ol>
+      <p class="chain-caption">North to south, the way the ferries run.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="ferry-title">
+    <div class="next-ferry" id="next-ferry">
+      <div>
+        <h2 id="ferry-title">Next boat from <span id="nf-from">Kingstown</span> to <span id="nf-to">Bequia</span></h2>
+        <div class="when" id="nf-when">…</div>
+        <p class="detail" id="nf-detail"></p>
+        <p class="after" id="nf-after"></p>
+      </div>
+      <div class="dir-switch" role="group" aria-label="Direction">
+        <button type="button" data-from="Kingstown" aria-pressed="true">From Kingstown</button>
+        <button type="button" data-from="Bequia" aria-pressed="false">From Bequia</button>
+      </div>
+    </div>
+    <p class="footnote">Times in St. Vincent time, from the published timetables. <a href="ferries.html">All ferry times, including Canouan, Mayreau and Union Island</a></p>
+  </section>
+
+  <section class="notice" aria-label="Hurricane Beryl">
+    <p><strong>Rebuilding after Hurricane Beryl.</strong> The July 2024 hurricane badly damaged Union Island, Canouan, Mayreau and the southern private islands. Most are welcoming visitors again, but check that your hotel, ferry and tours are running before you book.</p>
+  </section>
+
+  <section aria-labelledby="tools-title">
+    <h2 id="tools-title">Get around like a local</h2>
+    <div class="tools">
+      <div class="tool">
+        <h3><a href="taxis.html">Call an approved taxi</a></h3>
+        <p>Search all 326 tourism-approved drivers on St. Vincent and Bequia and tap to call.</p>
+      </div>
+      <div class="tool">
+        <h3><a href="map.html">Find what's near you</a></h3>
+        <p>Beaches, waterfalls, forts and ferry docks with GPS coordinates and one-tap directions.</p>
+      </div>
+      <div class="tool">
+        <h3><a href="getting-here.html">Plan your flights</a></h3>
+        <p>Which airlines fly in, the five airports, and what you need at immigration.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="facts-title">
+    <h2 id="facts-title">Good to know</h2>
+    <dl class="facts-row">
+      <div><dt>Money</dt><dd>Eastern Caribbean dollar (EC$). US$1 is fixed at EC$2.70.</dd></div>
+      <div><dt>Driving</dt><dd>On the left. You need a local permit to rent a car.</dd></div>
+      <div><dt>Time</dt><dd>UTC-4 all year, no daylight saving.</dd></div>
+      <div><dt>Emergency</dt><dd>Dial 911 or 999 for police, fire and coast guard.</dd></div>
+    </dl>
+  </section>
+</div>
+
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="stripe" aria-hidden="true"><span class="s-blue"></span><span class="s-gold"></span><span class="s-green"></span></div>
+    <p><strong>Vincy Vibes is an unofficial, fan-made guide</strong> and is not affiliated with the St. Vincent and the Grenadines Tourism Authority. Information comes from <a href="https://discoversvg.com/">discoversvg.com</a> and Wikipedia, checked October 2026. Schedules, phone numbers and opening times change, so confirm before you travel.</p>
+    <p>Map data &copy; OpenStreetMap contributors. Built by Jody-Ann Trimmingham.</p>
+  </div>
+</footer>
+<script src="js/data/islands.js"></script>
+<script src="js/site.js"></script>
+<script src="js/data/ferries.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

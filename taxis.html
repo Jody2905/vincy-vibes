@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Approved taxis · Vincy Vibes</title>
+  <meta name="description" content="Search all tourism-approved taxi drivers on St. Vincent and Bequia.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="index.html"><svg viewBox="0 0 30 30" aria-hidden="true"><path fill="#009E60" d="M8 3l4.5 7L8 17l-4.5-7z"/><path fill="#009E60" d="M22 3l4.5 7L22 17l-4.5-7z"/><path fill="#009E60" d="M15 13l4.5 7L15 27l-4.5-7z"/></svg>Vincy Vibes</a>
+    <nav class="nav" aria-label="Main"><a href="index.html">Home</a><a href="islands.html">Islands</a><a href="map.html">Map</a><a href="taxis.html" aria-current="page">Taxis</a><a href="ferries.html">Ferries</a><a href="getting-here.html">Getting here</a></nav>
+  </div>
+</header>
+<main>
+
+<div class="wrap">
+  <div class="page-head">
+    <h1>Tourism-approved taxis</h1>
+    <p class="lede">Every driver on the official SVG Tourism Authority list for St. Vincent and Bequia. Search by name and tap a number to call.</p>
+  </div>
+  <div class="notice">
+    <p><strong>Agree on the fare before you set off</strong>, and ask whether it's in EC$ or US$. On other islands, ask your hotel or look for taxis at the jetty (on Union Island, near the Clifton market).</p>
+  </div>
+  <div class="search-bar">
+    <label class="sr-only" for="taxi-q">Search drivers</label>
+    <input type="search" id="taxi-q" placeholder="Search by name or number" autocomplete="off">
+    <div class="seg" role="group" aria-label="Island">
+      <button type="button" data-island="" aria-pressed="true">All</button>
+      <button type="button" data-island="St. Vincent" aria-pressed="false">St. Vincent</button>
+      <button type="button" data-island="Bequia" aria-pressed="false">Bequia</button>
+    </div>
+  </div>
+  <p class="result-count" id="taxi-count" aria-live="polite"></p>
+  <ul class="taxi-list" id="taxi-list"></ul>
+  <p class="footnote">Source: <a href="https://discoversvg.com/travel/taxis/">Tourism Approved Taxi Operators</a>, SVG Tourism Authority, checked October 2026. Numbers are shown as published.</p>
+</div>
+
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="stripe" aria-hidden="true"><span class="s-blue"></span><span class="s-gold"></span><span class="s-green"></span></div>
+    <p><strong>Vincy Vibes is an unofficial, fan-made guide</strong> and is not affiliated with the St. Vincent and the Grenadines Tourism Authority. Information comes from <a href="https://discoversvg.com/">discoversvg.com</a> and Wikipedia, checked October 2026. Schedules, phone numbers and opening times change, so confirm before you travel.</p>
+    <p>Map data &copy; OpenStreetMap contributors. Built by Jody-Ann Trimmingham.</p>
+  </div>
+</footer>
+<script src="js/data/islands.js"></script>
+<script src="js/site.js"></script>
+<script src="js/data/taxis.js"></script>
+<script src="js/taxis.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Getting here · Vincy Vibes</title>
+  <meta name="description" content="Flights, airports and entry requirements for St. Vincent and the Grenadines.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="index.html"><svg viewBox="0 0 30 30" aria-hidden="true"><path fill="#009E60" d="M8 3l4.5 7L8 17l-4.5-7z"/><path fill="#009E60" d="M22 3l4.5 7L22 17l-4.5-7z"/><path fill="#009E60" d="M15 13l4.5 7L15 27l-4.5-7z"/></svg>Vincy Vibes</a>
+    <nav class="nav" aria-label="Main"><a href="index.html">Home</a><a href="islands.html">Islands</a><a href="map.html">Map</a><a href="taxis.html">Taxis</a><a href="ferries.html">Ferries</a><a href="getting-here.html" aria-current="page">Getting here</a></nav>
+  </div>
+</header>
+<main>
+
+<div class="wrap">
+  <div class="page-head">
+    <h1>Getting here</h1>
+    <p class="lede">Most visitors fly into Argyle International on St. Vincent, then hop to the Grenadines by small plane or ferry.</p>
+  </div>
+
+  <section class="two-col" aria-label="Airports">
+    <div>
+      <h2>Argyle International (SVD)</h2>
+      <p>Opened in February 2017, about 5 miles from Kingstown. It has a 9,000 ft runway and is one of the Caribbean's solar-powered airports.</p>
+      <p>From the airport, take a <a href="taxis.html">tourism-approved taxi</a> to Kingstown or the south-coast hotels.</p>
+    </div>
+    <div>
+      <h2>The Grenadines airports</h2>
+      <ul class="plain-list">
+        <li>J.F. Mitchell Airport, Bequia (BQU)</li>
+        <li>Mustique Airport (MQS)</li>
+        <li>Canouan Airport (CIW)</li>
+        <li>Union Island Airport (UNI)</li>
+      </ul>
+      <p class="muted" id="local-airlines"></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="flights-title">
+    <h2 id="flights-title">Direct international flights</h2>
+    <div class="table-scroll">
+      <table class="timetable" id="flights">
+        <thead><tr><th scope="col">Airline</th><th scope="col">From</th><th scope="col">When</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="muted" id="connections"></p>
+    <p class="footnote">As published by the SVG Tourism Authority, October 2026. Airlines change schedules every season, so book with the airline.</p>
+  </section>
+
+  <section class="two-col" aria-label="Entry and practical information">
+    <div>
+      <h2>Entry requirements</h2>
+      <ul class="plain-list">
+        <li>A valid passport and a return or onward ticket.</li>
+        <li>On arrival you'll be asked why you're visiting and where you're staying.</li>
+        <li>Visitors from CARICOM countries, the UK, the Schengen area and the USA usually get up to 6 months; most others 3 months.</li>
+        <li>OECS citizens can stay indefinitely.</li>
+        <li>Some nationalities need a visa in advance. Check the list at <a href="https://discoversvg.com/travel/getting-to-svg/">discoversvg.com</a>.</li>
+        <li>Extensions cost EC$75 (US$28) per person per month, at the Immigration office in Kingstown or the ports in Bequia, Mustique, Canouan and Union Island.</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Practical info</h2>
+      <ul class="plain-list">
+        <li><strong>Money:</strong> Eastern Caribbean dollar (EC$), fixed at EC$2.70 to US$1.</li>
+        <li><strong>Driving:</strong> on the left.</li>
+        <li><strong>Time:</strong> UTC-4 all year.</li>
+        <li><strong>Emergency:</strong> 911 or 999 for police, fire and coast guard.</li>
+        <li><strong>Medical help:</strong> Kingstown (784) 456-1955, Bequia (784) 458-3294.</li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="stripe" aria-hidden="true"><span class="s-blue"></span><span class="s-gold"></span><span class="s-green"></span></div>
+    <p><strong>Vincy Vibes is an unofficial, fan-made guide</strong> and is not affiliated with the St. Vincent and the Grenadines Tourism Authority. Information comes from <a href="https://discoversvg.com/">discoversvg.com</a> and Wikipedia, checked October 2026. Schedules, phone numbers and opening times change, so confirm before you travel.</p>
+    <p>Map data &copy; OpenStreetMap contributors. Built by Jody-Ann Trimmingham.</p>
+  </div>
+</footer>
+<script src="js/data/islands.js"></script>
+<script src="js/site.js"></script>
+<script src="js/data/travel.js"></script>
+<script src="js/getting-here.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ferry times · Vincy Vibes</title>
+  <meta name="description" content="Ferry timetables between Kingstown, Bequia, Canouan, Mayreau and Union Island, with live next departures.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="index.html"><svg viewBox="0 0 30 30" aria-hidden="true"><path fill="#009E60" d="M8 3l4.5 7L8 17l-4.5-7z"/><path fill="#009E60" d="M22 3l4.5 7L22 17l-4.5-7z"/><path fill="#009E60" d="M15 13l4.5 7L15 27l-4.5-7z"/></svg>Vincy Vibes</a>
+    <nav class="nav" aria-label="Main"><a href="index.html">Home</a><a href="islands.html">Islands</a><a href="map.html">Map</a><a href="taxis.html">Taxis</a><a href="ferries.html" aria-current="page">Ferries</a><a href="getting-here.html">Getting here</a></nav>
+  </div>
+</header>
+<main>
+
+<div class="wrap">
+  <div class="page-head">
+    <h1>Ferry times</h1>
+    <p class="lede">Ferries link Kingstown with Bequia many times a day, and run down to Canouan, Mayreau and Union Island several days a week.</p>
+  </div>
+
+  <section aria-labelledby="next-title">
+    <h2 id="next-title">Leaving soon</h2>
+    <div class="seg" role="group" aria-label="Leaving from">
+      <button type="button" data-from="Kingstown" aria-pressed="true">From Kingstown</button>
+      <button type="button" data-from="Bequia" aria-pressed="false">From Bequia</button>
+    </div>
+    <ul class="departures" id="departures" aria-live="polite"></ul>
+    <p class="footnote">Based on St. Vincent time right now. Kingstown to Bequia takes about 30 to 60 minutes depending on the boat.</p>
+  </section>
+
+  <section aria-labelledby="bq-title">
+    <h2 id="bq-title">Kingstown and Bequia</h2>
+    <div id="shuttle-tables"></div>
+  </section>
+
+  <section aria-labelledby="south-title">
+    <h2 id="south-title">Southern Grenadines</h2>
+    <p class="muted">Kingstown, Bequia, Canouan, Mayreau and Union Island. The timetable lists each sailing's first departure; stops are in order.</p>
+    <div id="south-tables"></div>
+  </section>
+
+  <p class="footnote">* A few times on the official timetable are printed without am/pm or with an obvious slip (for example "12:30 am" for a midday sailing). We show the likely time and mark it with *. Source: <a href="https://discoversvg.com/travel/ferry-schedules/">discoversvg.com ferry schedules</a>, checked October 2026. Schedules change and boats can be cancelled in rough seas, so check at the terminal.</p>
+</div>
+
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="stripe" aria-hidden="true"><span class="s-blue"></span><span class="s-gold"></span><span class="s-green"></span></div>
+    <p><strong>Vincy Vibes is an unofficial, fan-made guide</strong> and is not affiliated with the St. Vincent and the Grenadines Tourism Authority. Information comes from <a href="https://discoversvg.com/">discoversvg.com</a> and Wikipedia, checked October 2026. Schedules, phone numbers and opening times change, so confirm before you travel.</p>
+    <p>Map data &copy; OpenStreetMap contributors. Built by Jody-Ann Trimmingham.</p>
+  </div>
+</footer>
+<script src="js/data/islands.js"></script>
+<script src="js/site.js"></script>
+<script src="js/data/ferries.js"></script>
+<script src="js/ferries.js"></script>
+</body>
+</html>
