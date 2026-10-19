@@ -3,6 +3,7 @@
 window.VV_ISLANDS = [
   {
     id: "st-vincent",
+    sky: "sky-forest",
     color: "#00A86B",
     name: "St. Vincent",
     tagline: "Rainforest, a live volcano and black-sand bays",
@@ -28,6 +29,7 @@ window.VV_ISLANDS = [
   },
   {
     id: "young-island",
+    sky: "sky-day",
     color: "#00A6C0",
     name: "Young Island",
     tagline: "A private island a few minutes off Villa Beach",
@@ -48,6 +50,7 @@ window.VV_ISLANDS = [
   },
   {
     id: "bequia",
+    sky: "sky-day",
     color: "#FF5C8A",
     name: "Bequia",
     tagline: "Boat builders, a turtle sanctuary and Admiralty Bay",
@@ -72,6 +75,7 @@ window.VV_ISLANDS = [
   },
   {
     id: "mustique",
+    sky: "sky-dusk",
     color: "#F29F05",
     name: "Mustique",
     tagline: "Private villas, Basil's Bar and Macaroni Beach",
@@ -95,6 +99,7 @@ window.VV_ISLANDS = [
   },
   {
     id: "canouan",
+    sky: "sky-day",
     color: "#14B8A6",
     name: "Canouan",
     tagline: "A barrier reef and long white beaches",
@@ -118,6 +123,7 @@ window.VV_ISLANDS = [
   },
   {
     id: "mayreau",
+    sky: "sky-dawn",
     color: "#FF7A59",
     name: "Mayreau",
     tagline: "Saltwhistle Bay and the doorstep of the Tobago Cays",
@@ -142,6 +148,7 @@ window.VV_ISLANDS = [
   },
   {
     id: "tobago-cays",
+    sky: "sky-day",
     color: "#00B8D9",
     name: "Tobago Cays",
     tagline: "Five uninhabited cays and swimming with turtles",
@@ -164,6 +171,7 @@ window.VV_ISLANDS = [
   },
   {
     id: "union-island",
+    sky: "sky-dawn",
     color: "#7B5CD6",
     name: "Union Island",
     tagline: "Mount Taboi, kitesurfing and the Clifton waterfront",
@@ -189,6 +197,7 @@ window.VV_ISLANDS = [
   },
   {
     id: "palm-island",
+    sky: "sky-dusk",
     color: "#F2B705",
     name: "Palm Island",
     tagline: "A 135-acre island ringed by white sand",
@@ -210,6 +219,7 @@ window.VV_ISLANDS = [
   },
   {
     id: "petit-st-vincent",
+    sky: "sky-dusk",
     color: "#E8478B",
     name: "Petit St. Vincent",
     tagline: "The southernmost island of SVG",

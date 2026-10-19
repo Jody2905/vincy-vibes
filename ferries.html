@@ -5,30 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ferry times · Vincy Vibes</title>
   <meta name="description" content="Ferry timetables between Kingstown, Bequia, Canouan, Mayreau and Union Island, with live next departures.">
+  <meta name="theme-color" content="#1A0B3B">
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Rubik:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="topbar">
   <div class="wrap topbar-inner">
-    <a class="brand" href="index.html"><svg viewBox="0 0 30 30" aria-hidden="true"><path fill="#009E60" d="M8 3l4.5 7L8 17l-4.5-7z"/><path fill="#009E60" d="M22 3l4.5 7L22 17l-4.5-7z"/><path fill="#009E60" d="M15 13l4.5 7L15 27l-4.5-7z"/></svg>Vincy Vibes</a>
+    <a class="brand" href="index.html"><svg viewBox="0 0 30 30" aria-hidden="true"><path fill="#009E60" d="M8 3l4.5 7L8 17l-4.5-7z"/><path fill="#009E60" d="M22 3l4.5 7L22 17l-4.5-7z"/><path fill="#D81B7A" d="M15 13l4.5 7L15 27l-4.5-7z"/></svg>Vincy Vibes</a>
     <button type="button" class="menu-btn" aria-expanded="false" aria-controls="main-nav">Menu</button>
     <nav class="nav" id="main-nav" aria-label="Main"><a href="islands.html">Islands</a><a href="map.html">Map</a><a href="stay.html">Stay</a><a href="things-to-do.html">Things to do</a><a href="culture.html">Culture</a><a href="festivals.html">Festivals</a><a href="ferries.html" aria-current="page">Ferries</a><a href="taxis.html">Taxis</a><a href="getting-here.html">Getting here</a></nav>
   </div>
 </header>
 <main>
-<div class="band-lagoon">
-  <div class="page-band has-photo" style="--photo:url('https://images.unsplash.com/photo-1678815346864-74b41d4e05cb?auto=format&fit=crop&w=1800&q=70')"><a class="photo-credit" href="https://unsplash.com/photos/L2ybAJjmtZM" target="_blank" rel="noopener">Photo: Sam Hallett / Unsplash</a><div class="wrap page-head">
+<div class="page-band sky-day">
+  <svg class="scene" viewBox="0 0 1440 480" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+<defs>
+<linearGradient id="skyp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--sky1)"/><stop offset=".45" style="stop-color:var(--sky2)"/><stop offset=".78" style="stop-color:var(--sky3)"/><stop offset="1" style="stop-color:var(--sky4)"/></linearGradient>
+<linearGradient id="seap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--sea1)"/><stop offset="1" style="stop-color:var(--sea2)"/></linearGradient>
+<radialGradient id="glowp"><stop offset="0" style="stop-color:var(--sun);stop-opacity:.7"/><stop offset="1" style="stop-color:var(--sun);stop-opacity:0"/></radialGradient>
+</defs>
+<rect width="1440" height="480" fill="url(#skyp)"/>
+<circle cx="1060" cy="350" r="230" fill="url(#glowp)"/>
+<circle cx="1060" cy="356" r="60" style="fill:var(--sun)"/>
+<path d="M120 366 c40-18 80-22 120-8 c24-12 60-12 84 4 c30-10 58-8 80 4 Z" style="fill:var(--far)" opacity=".75"/>
+<path d="M1230 366 c18-12 42-16 64-6 c14-8 34-8 50 6 Z" style="fill:var(--far)" opacity=".75"/>
+<path d="M560 366 C 660 346 760 262 838 190 L 862 202 L 886 188 C 960 250 1060 334 1200 366 Z" style="fill:var(--land)"/><path d="M838 190 L 862 202 L 886 188 L 874 206 L 852 208 Z" style="fill:var(--sky3)" opacity=".35"/>
+<rect y="364" width="1440" height="116" fill="url(#seap)"/>
+<g style="stroke:var(--sun)" stroke-width="3" stroke-linecap="round" opacity=".55"><path d="M1000 382h120M1020 398h80M986 414h148M1030 432h60M1008 452h104"/></g>
+<g stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity=".18"><path d="M200 400h60M420 430h90M640 410h50M300 460h70M1240 420h60M760 456h80"/></g>
+<g transform="translate(70 486) scale(1.0 1.0)" style="fill:var(--palm);stroke:var(--palm)"><path d="M0 0 C 2 -60 -6 -120 -26 -178" fill="none" stroke-width="13" stroke-linecap="round"/><path d="M-26 -178 C -66 -198 -110 -190 -140 -158 C -100 -176 -62 -180 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -56 -220 -92 -236 -126 -230 C -86 -216 -54 -198 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -14 -226 26 -248 70 -242 C 30 -228 -2 -206 -26 -178 Z" stroke="none"/><path d="M-26 -178 C 20 -194 62 -180 90 -148 C 52 -168 12 -174 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -30 -220 -22 -252 0 -276 C -10 -240 -16 -208 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -60 -168 -84 -140 -92 -108 C -72 -138 -50 -160 -26 -178 Z" stroke="none"/></g><g transform="translate(1395 486) scale(-0.85 0.85)" style="fill:var(--palm);stroke:var(--palm)"><path d="M0 0 C 2 -60 -6 -120 -26 -178" fill="none" stroke-width="13" stroke-linecap="round"/><path d="M-26 -178 C -66 -198 -110 -190 -140 -158 C -100 -176 -62 -180 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -56 -220 -92 -236 -126 -230 C -86 -216 -54 -198 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -14 -226 26 -248 70 -242 C 30 -228 -2 -206 -26 -178 Z" stroke="none"/><path d="M-26 -178 C 20 -194 62 -180 90 -148 C 52 -168 12 -174 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -30 -220 -22 -252 0 -276 C -10 -240 -16 -208 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -60 -168 -84 -140 -92 -108 C -72 -138 -50 -160 -26 -178 Z" stroke="none"/></g>
+</svg>
+  <div class="wrap page-head">
     <h1 id="page-title">Ferry times</h1>
     <p class="lede" id="page-lede">Ferries link Kingstown with Bequia many times a day, and run down to Canouan, Mayreau and Union Island several days a week.</p>
-  </div></div>
-  <div class="wave-wrap"><svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0,0 H1440 V22 C1200,62 960,4 720,32 C480,60 240,2 0,34 Z"/></svg></div>
+  </div>
 </div>
 <div class="wrap content">
-  <section aria-labelledby="next-title">
+  <section aria-labelledby="next-title" style="margin-top:40px">
     <h2 id="next-title">Leaving soon</h2>
     <div class="seg" role="group" aria-label="Leaving from">
       <button type="button" data-from="Kingstown" aria-pressed="true">From Kingstown</button>
@@ -50,17 +67,16 @@
 </div>
 
 </main>
-<svg class="footer-wave" viewBox="0 0 1440 50" preserveAspectRatio="none" aria-hidden="true"><path fill="#0B3D5C" d="M0,30 C240,0 480,50 720,25 C960,0 1200,45 1440,20 L1440,50 L0,50 Z"/></svg>
+<div class="confetti-edge" aria-hidden="true"></div>
 <footer class="footer">
   <div class="wrap">
     <span class="brand-foot">Vincy Vibes</span>
     <div class="stripe" aria-hidden="true"><span class="s-blue"></span><span class="s-gold"></span><span class="s-green"></span></div>
-    <p><strong>Vincy Vibes is an unofficial, fan-made guide</strong> and is not affiliated with the St. Vincent and the Grenadines Tourism Authority. Information comes from <a href="https://discoversvg.com/">discoversvg.com</a> and Wikipedia, checked October 2026. Schedules, phone numbers and opening times change, so confirm before you travel.</p>
-    <p>Photos from <a href="https://unsplash.com/">Unsplash</a>, credited on each page. Map data &copy; OpenStreetMap contributors. Designed and built by Jody-Ann Trimmingham.</p>
+    <p><strong>Vincy Vibes is an unofficial, fan-made guide</strong> and is not affiliated with the St. Vincent and the Grenadines Tourism Authority. Information comes from <a href="https://discoversvg.com/">discoversvg.com</a>, government sources, local news and Wikipedia, checked October 2026. Schedules, phone numbers and event dates change, so confirm before you travel.</p>
+    <p>All illustrations are original. Map data &copy; OpenStreetMap contributors. Designed and built by Jody-Ann Trimmingham.</p>
   </div>
 </footer>
 <script src="js/data/islands.js"></script>
-<script src="js/data/photos.js"></script>
 <script src="js/site.js"></script>
 <script src="js/data/ferries.js"></script>
 <script src="js/ferries.js"></script>

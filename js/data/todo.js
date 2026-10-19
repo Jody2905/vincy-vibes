@@ -1,4 +1,6 @@
-// Things to do. The 32 must-dos are from "32 Must Do in SVG" on discoversvg.com;
+// Things to do. The must-dos are from "32 Must Do in SVG" on discoversvg.com, minus three
+// events we couldn't confirm are still running (Mayreau Regatta, Union Island Conch Festival,
+// full-moon kitesurf party);
 // nature and dive picks are from its Eco-Adventures and Diving pages. Checked October 2026.
 // island: "" means the source doesn't say where.
 window.VV_TODO_CATS = {
@@ -18,7 +20,7 @@ window.VV_MUSTDO = [
   { title: "Breadfruit bowl at Grenadine House", what: "A generous plate built around the national favourite, breadfruit.", island: "st-vincent", cat: "eat" },
   { title: "Tropical Realism at Calvert Jones Art", what: "Find a piece of tropical-themed art to take home.", island: "", cat: "shop" },
   { title: "Night dive with Serenity Dive", what: "See the reef's night shift on a guided dive after dark.", island: "", cat: "sea" },
-  { title: "Nine Nights of Lights", what: "Christmas light displays at the Botanic Gardens after dark.", island: "st-vincent", cat: "culture" },
+  { title: "Nine Nights of Lights", what: "Nine December nights of Christmas lights and music at the Botanic Gardens.", island: "st-vincent", cat: "culture" },
   { title: "Carib-Beans specialty coffee", what: "Good coffee at the cruise ship terminal in Kingstown.", island: "st-vincent", cat: "eat" },
   { title: "Climb Fort Duvernette", what: "Wide views from the top of the rock fort (closed for safety since January 2025, so check first).", island: "young-island", cat: "nature" },
   { title: "Ride the Jaden Sun fast ferry", what: "Zip down the island chain from Kingstown to Union Island.", island: "", cat: "sea" },
@@ -27,7 +29,7 @@ window.VV_MUSTDO = [
   { title: "Seafood at Bequia Marina", what: "Dock up and eat the day's fresh catch.", island: "bequia", cat: "eat" },
   { title: "Bequia Maritime Museum", what: "The story of Bequia's sailors, boat builders and whalers.", island: "bequia", cat: "culture" },
   { title: "Crafts on the Belmont Walkway", what: "Handmade crafts from vendors along the waterfront path.", island: "bequia", cat: "shop" },
-  { title: "Mustique Blues Festival", what: "Live blues at Basil's Bar in late January and early February.", island: "mustique", cat: "culture" },
+  { title: "Mustique Blues Festival", what: "Live blues at Basil's Bar, late January to early February.", island: "mustique", cat: "culture" },
   { title: "The Pink House boutique", what: "Resort clothes in Britannia Bay.", island: "mustique", cat: "shop" },
   { title: "Picnic on Macaroni Beach", what: "Reserve a picnic spot on Mustique's quiet Atlantic beach.", island: "mustique", cat: "nature" },
   { title: "Shenanigans at Sandy Lane Yacht Club", what: "A meal or cocktail with a view over the marina.", island: "canouan", cat: "eat" },
@@ -35,12 +37,9 @@ window.VV_MUSTDO = [
   { title: "Snorkel the Canouan barrier reef", what: "One of the longest barrier reefs in the Caribbean.", island: "canouan", cat: "sea" },
   { title: "Meet the land turtles", what: "Spot the tortoises Canouan is said to be named after.", island: "canouan", cat: "nature" },
   { title: "Seamoss rum punch", what: "Mayreau's own rum punch, made with seamoss.", island: "mayreau", cat: "eat" },
-  { title: "Sail in for the Mayreau Regatta", what: "The island's yearly regatta, around late April or early May.", island: "mayreau", cat: "culture" },
   { title: "Jungle Special at the Last Bar Before the Jungle", what: "A beachside rum punch at Saltwhistle Bay.", island: "mayreau", cat: "eat" },
   { title: "Ashton Lagoon trails", what: "Hike and birdwatch around the lagoon.", island: "union-island", cat: "nature" },
-  { title: "Union Island Conch Festival", what: "Taste conch cooked every way you can think of.", island: "union-island", cat: "culture" },
   { title: "Get married in the Tobago Cays", what: "A small wedding with the marine park as the backdrop.", island: "tobago-cays", cat: "culture" },
-  { title: "Full-moon kitesurfing show", what: "JT Pro Center's show and beach party as the full moon rises.", island: "union-island", cat: "sea" },
   { title: "Nightlife at Just Right Bar", what: "Local nights out in Ashton.", island: "union-island", cat: "eat" }
 ];
 

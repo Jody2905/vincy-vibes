@@ -1,45 +1,59 @@
-// Home page: the island chain, next-ferry boat and "Did you know?" facts.
+// Home page: Vincy Mas countdown, Independence ribbon, next ferry and "Did you know?".
 (function () {
   "use strict";
   var VV = window.VV;
 
-  // Island chain, north to south, each dot in its island colour
-  document.getElementById("chain").innerHTML = window.VV_ISLANDS.map(function (isl, i) {
-    return '<li class="' + (i === 0 ? "main" : "") + '">' + VV.islandIcon(isl) +
-      '<a href="island.html?id=' + isl.id + '"><span class="stop-name">' + VV.esc(isl.name) + "</span>" +
-      '<span class="stop-tag">' + VV.esc(isl.tagline) + "</span></a></li>";
-  }).join("");
-
-  // Celebrate banner: Independence in October, otherwise the countdown to Vincy Mas 2027
-  (function () {
-    var title = document.getElementById("celebrate-title");
-    var text = document.getElementById("celebrate-text");
-    var count = document.getElementById("celebrate-count");
-    var ind = VV.independence();
-    var mas = VV.vincyMas();
-    if (ind.inOctober && ind.days <= 31) {
-      title.textContent = ind.today ? "Happy " + ind.ordinal + " Independence, SVG!" : "Happy " + ind.ordinal + " Independence, SVG";
-      text.textContent = "On 27 October 1979, St. Vincent and the Grenadines became an independent nation. Expect parades, cultural shows and a sea of blue, gold and green.";
-      count.innerHTML = ind.today ? '<span class="big-num">Today!</span>' :
-        '<span class="big-num">' + ind.days + '</span><span class="lbl">' + (ind.days === 1 ? "day" : "days") + " to Independence Day</span>";
-    } else if (!mas.over) {
-      title.textContent = "Vincy Mas 2027: Road to 50";
-      text.textContent = "25 June to 6 July 2027. Fifty years since Carnival moved to the summer: soca, steel pan, J'ouvert and mas bands in Kingstown.";
-      count.innerHTML = mas.on ? '<span class="big-num">It\'s Mas!</span>' :
-        '<span class="big-num">' + mas.days + '</span><span class="lbl">days to Vincy Mas</span>';
-    } else {
-      title.textContent = "Proudly Vincentian";
-      text.textContent = "Independent since 27 October 1979. Discover our national symbols, heroes and festivals.";
-      count.innerHTML = '<span class="big-num">' + (ind.year - 1979) + '</span><span class="lbl">years independent this October</span>';
+  // ---- Vincy Mas 2027 countdown (starts 25 June 2027, 00:00 St. Vincent time = 04:00 UTC) ----
+  var MAS_START = Date.UTC(2027, 5, 25, 4, 0, 0);
+  var MAS_END = Date.UTC(2027, 6, 7, 4, 0, 0);
+  var ids = ["d-days", "d-hours", "d-mins", "d-secs"];
+  var lastVals = [];
+  function pad(n) { return n < 10 ? "0" + n : String(n); }
+  function tickMas() {
+    var now = Date.now();
+    var why = document.getElementById("mas-why");
+    if (now >= MAS_START && now < MAS_END) {
+      document.getElementById("mas-digits").innerHTML = '<div class="digit"><span class="num">It\'s Mas!</span><span class="unit">Happening now in Kingstown</span></div>';
+      return false;
     }
-  })();
+    if (now >= MAS_END) {
+      document.getElementById("mas-digits").hidden = true;
+      why.textContent = "Vincy Mas 2027 has wrapped. Watch the festival calendar for next year's dates.";
+      return false;
+    }
+    var s = Math.floor((MAS_START - now) / 1000);
+    var vals = [Math.floor(s / 86400), Math.floor(s % 86400 / 3600), Math.floor(s % 3600 / 60), s % 60];
+    vals.forEach(function (v, i) {
+      var elNum = document.getElementById(ids[i]);
+      var text = i === 0 ? String(v) : pad(v);
+      if (lastVals[i] !== text) {
+        elNum.textContent = text;
+        var box = elNum.parentNode;
+        box.classList.remove("flip"); void box.offsetWidth; box.classList.add("flip");
+      }
+      lastVals[i] = text;
+    });
+    document.getElementById("mas-digits").setAttribute("aria-label", vals[0] + " days, " + vals[1] + " hours and " + vals[2] + " minutes to Vincy Mas 2027");
+    return true;
+  }
+  if (tickMas()) {
+    var timer = setInterval(function () { if (!tickMas()) clearInterval(timer); }, 1000);
+  }
 
-  // Next ferry, with a boat that sails across as departure gets closer
+  // ---- Independence ribbon (October only) ----
+  var ind = VV.independence();
+  if (ind.inOctober) {
+    var rib = document.getElementById("indep-ribbon");
+    rib.hidden = false;
+    document.getElementById("indep-text").textContent = "Happy " + ind.ordinal + " Independence, St. Vincent and the Grenadines";
+    document.getElementById("indep-days").textContent = ind.today ? "Today!" : ind.days + (ind.days === 1 ? " day to go" : " days to go");
+  }
+
+  // ---- Next ferry, with a boat that sails across as departure gets closer ----
   var from = "Kingstown";
   var buttons = document.querySelectorAll(".dir-switch button");
-  var WINDOW = 120; // minutes: the boat starts moving 2 hours before departure
-
-  function render() {
+  var WINDOW = 120;
+  function renderFerry() {
     var to = from === "Kingstown" ? "Bequia" : "Kingstown";
     var deps = VV.nextDepartures(from, 2);
     document.getElementById("nf-from").textContent = from;
@@ -49,7 +63,6 @@
     var when = document.getElementById("nf-when");
     var detail = document.getElementById("nf-detail");
     var after = document.getElementById("nf-after");
-    var boat = document.getElementById("nf-boat");
     if (!deps.length) {
       when.textContent = "No sailings found";
       detail.textContent = "Check the full timetable.";
@@ -61,40 +74,36 @@
     detail.textContent = VV.whenLabel(d) + ", " + d.operator + ", " + VV.formatWait(d.wait) + ".";
     after.textContent = deps[1] ? "After that: " + VV.formatTime(deps[1].time) + " (" + deps[1].operator + ", " + VV.whenLabel(deps[1]).toLowerCase() + ")" : "";
     var progress = Math.max(0, Math.min(1, 1 - d.wait / WINDOW));
-    boat.style.left = "calc(40px + (100% - 80px) * " + progress.toFixed(3) + ")";
+    document.getElementById("nf-boat").style.left = "calc(40px + (100% - 80px) * " + progress.toFixed(3) + ")";
   }
-
   buttons.forEach(function (b) {
     b.addEventListener("click", function () {
       from = b.getAttribute("data-from");
       buttons.forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
-      render();
+      renderFerry();
     });
   });
-  render();
-  setInterval(render, 30000);
+  renderFerry();
+  setInterval(renderFerry, 30000);
 
-  // Did you know?
+  // ---- Did you know? ----
   var FACTS = [
     "St. Vincent and the Grenadines is 32 islands and cays, stretched across about 70 miles of sea.",
-    "The Botanic Gardens in Kingstown were started in 1765, making them one of the oldest in the Western Hemisphere.",
+    "The Botanic Gardens in Kingstown were started in 1765, among the oldest in the Western Hemisphere.",
     "Jack Sparrow was marooned on Petit Tabac in the Tobago Cays in the first Pirates of the Caribbean film.",
     "Mount Taboi on Union Island is the highest point in the Grenadines, at 999 ft.",
     "Fort Charlotte's cannons point inland, not out to sea.",
     "Divers call SVG the \"Critter Capital of the Caribbean\".",
-    "The national bird, the St. Vincent parrot (Amazona guildingii), lives nowhere else on Earth.",
+    "The St. Vincent parrot (Amazona guildingii) lives nowhere else on Earth.",
     "Bequia is pronounced \"BECK-way\".",
-    "Argyle International, opened in 2017, is one of the Caribbean's solar-powered airports.",
-    "Basil's Bar on Mustique made CNN's list of the world's 50 best beach bars.",
-    "Nine Mornings is a uniquely Vincentian Christmas tradition of pre-dawn street parties from 16 to 24 December.",
+    "Vincy Mas moved from the days before Lent to June and July in 1977. 2027 is its Road to 50.",
+    "Nine Mornings, the nine pre-dawn mornings before Christmas, is a uniquely Vincentian tradition.",
+    "The national dish is roasted breadfruit and fried jackfish.",
     "La Soufrière, the volcano on St. Vincent, rises to 4,049 ft."
   ];
   var i = Math.floor(Math.random() * FACTS.length);
   var factEl = document.getElementById("fact");
   function showFact() { factEl.textContent = FACTS[i]; }
-  document.getElementById("next-fact").addEventListener("click", function () {
-    i = (i + 1) % FACTS.length;
-    showFact();
-  });
+  document.getElementById("next-fact").addEventListener("click", function () { i = (i + 1) % FACTS.length; showFact(); });
   showFact();
 })();

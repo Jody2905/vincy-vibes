@@ -9,27 +9,16 @@
   var isl = islands[index];
 
   // Page colour = island colour
-  document.getElementById("island-band").style.setProperty("--accent", isl.color);
   document.body.style.setProperty("--accent", isl.color);
 
-  // Header picture: a photo where we have a free one, otherwise a big island illustration
-  var band = document.querySelector("#island-band .page-band");
-  var photoKey = (window.VV_ISLAND_PHOTO || {})[isl.id];
-  var photo = photoKey && window.VV_PHOTOS[photoKey];
-  if (photo) {
-    band.classList.add("has-photo");
-    band.style.setProperty("--photo", "url('" + photo.src + "')");
-    var cr = document.createElement("a");
-    cr.className = "photo-credit"; cr.href = photo.page; cr.target = "_blank"; cr.rel = "noopener";
-    cr.textContent = "Photo: " + photo.by + " / Unsplash";
-    band.insertBefore(cr, band.firstChild);
-  } else {
-    var art = document.createElement("div");
-    art.className = "band-art";
-    art.setAttribute("aria-hidden", "true");
-    art.innerHTML = VV.islandIcon({ id: isl.id, color: "#FFFFFF" });
-    band.appendChild(art);
-  }
+  // Illustrated header: the island's own sky and its symbol (volcano, sailboat, turtle...)
+  var bandEl = document.getElementById("island-band");
+  bandEl.className = "page-band " + (isl.sky || "sky-day");
+  var art = document.createElement("div");
+  art.className = "band-art";
+  art.setAttribute("aria-hidden", "true");
+  art.innerHTML = VV.islandIcon(isl);
+  bandEl.appendChild(art);
 
   document.title = isl.name + " · Vincy Vibes";
   document.getElementById("page-title").textContent = isl.name;

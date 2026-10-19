@@ -3,7 +3,7 @@
   "use strict";
   var VV = window.VV;
   document.getElementById("island-list").innerHTML = window.VV_ISLANDS.map(function (isl) {
-    return '<li style="--accent:' + isl.color + '">' +
+    return '<li style="--accent:' + isl.color + '">' + VV.islandIcon(isl) +
       '<h2><a href="island.html?id=' + isl.id + '">' + VV.esc(isl.name) + "</a>" +
       (isl.beryl ? ' <span class="pill">Rebuilding after Beryl</span>' : "") + "</h2>" +
       '<p class="tag">' + VV.esc(isl.tagline) + "</p>" +

@@ -3,106 +3,238 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vincy Vibes: a fun guide to St. Vincent and the Grenadines</title>
-  <meta name="description" content="Unofficial guide to St. Vincent and the Grenadines: islands, GPS map, places to stay, things to do, festivals, ferries and taxis.">
+  <title>Vincy Vibes: the unofficial guide to St. Vincent and the Grenadines</title>
+  <meta name="description" content="Island hop across St. Vincent and the Grenadines: interactive map, Vincy Mas 2027 countdown, food, festivals, places to stay, ferries and taxis.">
+  <meta name="theme-color" content="#1A0B3B">
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Rubik:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="topbar">
   <div class="wrap topbar-inner">
-    <a class="brand" href="index.html"><svg viewBox="0 0 30 30" aria-hidden="true"><path fill="#009E60" d="M8 3l4.5 7L8 17l-4.5-7z"/><path fill="#009E60" d="M22 3l4.5 7L22 17l-4.5-7z"/><path fill="#009E60" d="M15 13l4.5 7L15 27l-4.5-7z"/></svg>Vincy Vibes</a>
+    <a class="brand" href="index.html"><svg viewBox="0 0 30 30" aria-hidden="true"><path fill="#009E60" d="M8 3l4.5 7L8 17l-4.5-7z"/><path fill="#009E60" d="M22 3l4.5 7L22 17l-4.5-7z"/><path fill="#D81B7A" d="M15 13l4.5 7L15 27l-4.5-7z"/></svg>Vincy Vibes</a>
     <button type="button" class="menu-btn" aria-expanded="false" aria-controls="main-nav">Menu</button>
     <nav class="nav" id="main-nav" aria-label="Main"><a href="islands.html">Islands</a><a href="map.html">Map</a><a href="stay.html">Stay</a><a href="things-to-do.html">Things to do</a><a href="culture.html">Culture</a><a href="festivals.html">Festivals</a><a href="ferries.html">Ferries</a><a href="taxis.html">Taxis</a><a href="getting-here.html">Getting here</a></nav>
   </div>
 </header>
 <main>
 
-<div class="photo-hero" style="--photo:url('https://images.unsplash.com/photo-1635392509670-9b5a8baccbe8?auto=format&fit=crop&w=1800&q=70')">
-  <a class="photo-credit" href="https://unsplash.com/photos/7uNKhDy12_k" target="_blank" rel="noopener">Photo: Andre Alexander / Unsplash</a>
-  <div class="wrap photo-hero-inner">
-    <span class="sticker">Unofficial and proudly Vincy</span>
-    <h1 id="hero-title">Thirty-two islands, one ferry ride at a time.</h1>
-    <p class="lede">A fun guide to St. Vincent and the Grenadines: volcano hikes, turtle lagoons, beach bars, Carnival, and how to get between it all.</p>
-    <div class="hero-actions">
-      <a class="btn btn-gold" href="map.html">Open the map</a>
-      <a class="btn btn-white" href="things-to-do.html">Start your bucket list</a>
+<section class="hero sky-dusk" aria-labelledby="hero-title">
+  <svg class="scene" viewBox="0 0 1440 480" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+<defs>
+<linearGradient id="skyh" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--sky1)"/><stop offset=".45" style="stop-color:var(--sky2)"/><stop offset=".78" style="stop-color:var(--sky3)"/><stop offset="1" style="stop-color:var(--sky4)"/></linearGradient>
+<linearGradient id="seah" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--sea1)"/><stop offset="1" style="stop-color:var(--sea2)"/></linearGradient>
+<radialGradient id="glowh"><stop offset="0" style="stop-color:var(--sun);stop-opacity:.7"/><stop offset="1" style="stop-color:var(--sun);stop-opacity:0"/></radialGradient>
+</defs>
+<rect width="1440" height="480" fill="url(#skyh)"/>
+<circle cx="760" cy="350" r="230" fill="url(#glowh)"/>
+<circle cx="760" cy="356" r="60" style="fill:var(--sun)"/>
+<path d="M120 366 c40-18 80-22 120-8 c24-12 60-12 84 4 c30-10 58-8 80 4 Z" style="fill:var(--far)" opacity=".75"/>
+<path d="M1230 366 c18-12 42-16 64-6 c14-8 34-8 50 6 Z" style="fill:var(--far)" opacity=".75"/>
+<path d="M560 366 C 660 346 760 262 838 190 L 862 202 L 886 188 C 960 250 1060 334 1200 366 Z" style="fill:var(--land)"/><path d="M838 190 L 862 202 L 886 188 L 874 206 L 852 208 Z" style="fill:var(--sky3)" opacity=".35"/>
+<rect y="364" width="1440" height="116" fill="url(#seah)"/>
+<g style="stroke:var(--sun)" stroke-width="3" stroke-linecap="round" opacity=".55"><path d="M700 382h120M720 398h80M686 414h148M730 432h60M708 452h104"/></g>
+<g stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity=".18"><path d="M200 400h60M420 430h90M640 410h50M300 460h70M1240 420h60M760 456h80"/></g>
+<g transform="translate(70 486) scale(1.0 1.0)" style="fill:var(--palm);stroke:var(--palm)"><path d="M0 0 C 2 -60 -6 -120 -26 -178" fill="none" stroke-width="13" stroke-linecap="round"/><path d="M-26 -178 C -66 -198 -110 -190 -140 -158 C -100 -176 -62 -180 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -56 -220 -92 -236 -126 -230 C -86 -216 -54 -198 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -14 -226 26 -248 70 -242 C 30 -228 -2 -206 -26 -178 Z" stroke="none"/><path d="M-26 -178 C 20 -194 62 -180 90 -148 C 52 -168 12 -174 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -30 -220 -22 -252 0 -276 C -10 -240 -16 -208 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -60 -168 -84 -140 -92 -108 C -72 -138 -50 -160 -26 -178 Z" stroke="none"/></g><g transform="translate(1395 486) scale(-0.85 0.85)" style="fill:var(--palm);stroke:var(--palm)"><path d="M0 0 C 2 -60 -6 -120 -26 -178" fill="none" stroke-width="13" stroke-linecap="round"/><path d="M-26 -178 C -66 -198 -110 -190 -140 -158 C -100 -176 -62 -180 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -56 -220 -92 -236 -126 -230 C -86 -216 -54 -198 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -14 -226 26 -248 70 -242 C 30 -228 -2 -206 -26 -178 Z" stroke="none"/><path d="M-26 -178 C 20 -194 62 -180 90 -148 C 52 -168 12 -174 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -30 -220 -22 -252 0 -276 C -10 -240 -16 -208 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -60 -168 -84 -140 -92 -108 C -72 -138 -50 -160 -26 -178 Z" stroke="none"/></g>
+</svg>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kicker">The unofficial guide to St. Vincent and the Grenadines</span>
+      <h1 id="hero-title">Thirty-two islands, one ferry ride at a time.</h1>
+      <p class="lede">Rainforest and a living volcano, turquoise lagoons full of turtles, soca and steel pan, roasted breadfruit and a cold Hairoun at sunset. Here's how to find it all.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="islands.html">Explore the islands</a>
+        <a class="btn btn-white" href="map.html">Open the GPS map</a>
+      </div>
+      <div class="hero-stop" id="hop-card" aria-live="polite">
+        <span class="label">You're in</span>
+        <h3 id="hop-name">St. Vincent</h3>
+        <p id="hop-tag">Rainforest, a live volcano and black-sand bays</p>
+        <div class="trip" id="hop-trip">Tap an island on the map to set sail from Kingstown.</div>
+        <a class="go" id="hop-go" href="island.html?id=st-vincent">Explore St. Vincent</a>
+      </div>
+    </div>
+    <div class="hop-panel" id="hop">
+      <div class="hop-head"><h2>Island hop</h2><span>Tap an island to sail there</span></div>
+      <svg id="hop-map" class="hop-map" viewBox="0 0 360 640" role="group" aria-label="Map of St. Vincent and the Grenadines. Choose an island to sail there."></svg>
+      <div class="hop-chips" id="hop-chips" role="group" aria-label="Islands"></div>
     </div>
   </div>
-  <div class="sea-scene" aria-hidden="true">
-    <div class="boat"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M30 6v34h-20z" fill="#FFFFFF" stroke="#0B3D5C" stroke-width="2.5" stroke-linejoin="round"/><path d="M34 12v28h16z" fill="#FF5C8A" stroke="#0B3D5C" stroke-width="2.5" stroke-linejoin="round"/><path d="M8 44h48l-7 10H15z" fill="#0B3D5C"/><path d="M32 4v40" stroke="#0B3D5C" stroke-width="2.5"/></svg></div>
-    <svg class="waves" viewBox="0 0 1440 120" preserveAspectRatio="none">
-      <path fill="#7FDCEB" fill-opacity=".85" d="M0,48 C180,18 360,78 540,50 C720,22 900,80 1080,52 C1260,24 1350,44 1440,40 L1440,120 L0,120 Z"/>
-      <path fill="#00A6C0" d="M0,72 C200,50 380,98 600,74 C820,50 1000,96 1200,76 C1320,64 1400,70 1440,66 L1440,120 L0,120 Z"/>
-      <path fill="#FFFFFF" d="M0,98 C240,82 480,116 720,100 C960,84 1200,114 1440,96 L1440,120 L0,120 Z"/>
-    </svg>
+</section>
+
+<div class="indep-ribbon" id="indep-ribbon" hidden>
+  <div class="wrap">
+    <strong id="indep-text">Happy Independence, SVG</strong>
+    <span class="pill-count" id="indep-days"></span>
+    <a href="culture.html">Our independence and culture</a>
   </div>
 </div>
 
+<section class="mas-band" aria-labelledby="mas-title" style="margin:0">
+  <div class="sequins" aria-hidden="true"></div>
+  <svg class="fan left" viewBox="0 0 400 400" aria-hidden="true" focusable="false"><g transform="rotate(-84.0 200 390)"><ellipse cx="200" cy="230" rx="24" ry="150" fill="#D81B7A" opacity=".9"/><path d="M200 390 L200 86" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/><circle cx="200" cy="106" r="9" fill="#FFFFFF" fill-opacity=".8"/></g><g transform="rotate(-70.0 200 390)"><ellipse cx="200" cy="230" rx="24" ry="150" fill="#FCD116" opacity=".9"/><path d="M200 390 L200 86" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/><circle cx="200" cy="106" r="9" fill="#FFFFFF" fill-opacity=".8"/></g><g transform="rotate(-56.0 200 390)"><ellipse cx="200" cy="230" rx="24" ry="150" fill="#10A7B8" opacity=".9"/><path d="M200 390 L200 86" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/><circle cx="200" cy="106" r="9" fill="#FFFFFF" fill-opacity=".8"/></g><g transform="rotate(-42.0 200 390)"><ellipse cx="200" cy="230" rx="24" ry="150" fill="#FF9F1C" opacity=".9"/><path d="M200 390 L200 86" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/><circle cx="200" cy="106" r="9" fill="#FFFFFF" fill-opacity=".8"/></g><g transform="rotate(-28.0 200 390)"><ellipse cx="200" cy="230" rx="24" ry="150" fill="#009E60" opacity=".9"/><path d="M200 390 L200 86" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/><circle cx="200" cy="106" r="9" fill="#FFFFFF" fill-opacity=".8"/></g><g transform="rotate(-14.0 200 390)"><ellipse cx="200" cy="230" rx="24" ry="150" fill="#D81B7A" opacity=".9"/><path d="M200 390 L200 86" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/><circle cx="200" cy="106" r="9" fill="#FFFFFF" fill-opacity=".8"/></g><g transform="rotate(0.0 200 390)"><ellipse cx="200" cy="230" rx="24" ry="150" fill="#FCD116" opacity=".9"/><path d="M200 390 L200 86" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/><circle cx="200" cy="106" r="9" fill="#FFFFFF" fill-opacity=".8"/></g><g transform="rotate(14.0 200 390)"><ellipse cx="200" cy="230" rx="24" ry="150" fill="#10A7B8" opacity=".9"/><path d="M200 390 L200 86" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/><circle cx="200" cy="106" r="9" fill="#FFFFFF" fill-opacity=".8"/></g><g transform="rotate(28.0 200 390)"><ellipse cx="200" cy="230" rx="24" ry="150" fill="#FF9F1C" opacity=".9"/><path d="M200 390 L200 86" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/><circle cx="200" cy="106" r="9" fill="#FFFFFF" fill-opacity=".8"/></g><g transform="rotate(42.0 200 390)"><ellipse cx="200" cy="230" rx="24" ry="150" fill="#009E60" opacity=".9"/><path d="M200 390 L200 86" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/><circle cx="200" cy="106" r="9" fill="#FFFFFF" fill-opacity=".8"/></g><g transform="rotate(56.0 200 390)"><ellipse cx="200" cy="230" rx="24" ry="150" fill="#D81B7A" opacity=".9"/><path d="M200 390 L200 86" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/><circle cx="200" cy="106" r="9" fill="#FFFFFF" fill-opacity=".8"/></g><g transform="rotate(70.0 200 390)"><ellipse cx="200" cy="230" rx="24" ry="150" fill="#FCD116" opacity=".9"/><path d="M200 390 L200 86" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/><circle cx="200" cy="106" r="9" fill="#FFFFFF" fill-opacity=".8"/></g><g transform="rotate(84.0 200 390)"><ellipse cx="200" cy="230" rx="24" ry="150" fill="#10A7B8" opacity=".9"/><path d="M200 390 L200 86" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/><circle cx="200" cy="106" r="9" fill="#FFFFFF" fill-opacity=".8"/></g><circle cx="200" cy="390" r="70" fill="#FCD116"/><circle cx="200" cy="390" r="52" fill="#D81B7A"/><circle cx="200" cy="335" r="6" fill="#FFFFFF" transform="rotate(-80 200 390)"/><circle cx="200" cy="335" r="6" fill="#FFFFFF" transform="rotate(-60 200 390)"/><circle cx="200" cy="335" r="6" fill="#FFFFFF" transform="rotate(-40 200 390)"/><circle cx="200" cy="335" r="6" fill="#FFFFFF" transform="rotate(-20 200 390)"/><circle cx="200" cy="335" r="6" fill="#FFFFFF" transform="rotate(0 200 390)"/><circle cx="200" cy="335" r="6" fill="#FFFFFF" transform="rotate(20 200 390)"/><circle cx="200" cy="335" r="6" fill="#FFFFFF" transform="rotate(40 200 390)"/><circle cx="200" cy="335" r="6" fill="#FFFFFF" transform="rotate(60 200 390)"/><circle cx="200" cy="335" r="6" fill="#FFFFFF" transform="rotate(80 200 390)"/></svg>
+  <svg class="fan right" viewBox="0 0 400 400" aria-hidden="true" focusable="false"><g transform="rotate(-84.0 200 390)"><ellipse cx="200" cy="230" rx="24" ry="150" fill="#D81B7A" opacity=".9"/><path d="M200 390 L200 86" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/><circle cx="200" cy="106" r="9" fill="#FFFFFF" fill-opacity=".8"/></g><g transform="rotate(-70.0 200 390)"><ellipse cx="200" cy="230" rx="24" ry="150" fill="#FCD116" opacity=".9"/><path d="M200 390 L200 86" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/><circle cx="200" cy="106" r="9" fill="#FFFFFF" fill-opacity=".8"/></g><g transform="rotate(-56.0 200 390)"><ellipse cx="200" cy="230" rx="24" ry="150" fill="#10A7B8" opacity=".9"/><path d="M200 390 L200 86" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/><circle cx="200" cy="106" r="9" fill="#FFFFFF" fill-opacity=".8"/></g><g transform="rotate(-42.0 200 390)"><ellipse cx="200" cy="230" rx="24" ry="150" fill="#FF9F1C" opacity=".9"/><path d="M200 390 L200 86" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/><circle cx="200" cy="106" r="9" fill="#FFFFFF" fill-opacity=".8"/></g><g transform="rotate(-28.0 200 390)"><ellipse cx="200" cy="230" rx="24" ry="150" fill="#009E60" opacity=".9"/><path d="M200 390 L200 86" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/><circle cx="200" cy="106" r="9" fill="#FFFFFF" fill-opacity=".8"/></g><g transform="rotate(-14.0 200 390)"><ellipse cx="200" cy="230" rx="24" ry="150" fill="#D81B7A" opacity=".9"/><path d="M200 390 L200 86" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/><circle cx="200" cy="106" r="9" fill="#FFFFFF" fill-opacity=".8"/></g><g transform="rotate(0.0 200 390)"><ellipse cx="200" cy="230" rx="24" ry="150" fill="#FCD116" opacity=".9"/><path d="M200 390 L200 86" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/><circle cx="200" cy="106" r="9" fill="#FFFFFF" fill-opacity=".8"/></g><g transform="rotate(14.0 200 390)"><ellipse cx="200" cy="230" rx="24" ry="150" fill="#10A7B8" opacity=".9"/><path d="M200 390 L200 86" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/><circle cx="200" cy="106" r="9" fill="#FFFFFF" fill-opacity=".8"/></g><g transform="rotate(28.0 200 390)"><ellipse cx="200" cy="230" rx="24" ry="150" fill="#FF9F1C" opacity=".9"/><path d="M200 390 L200 86" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/><circle cx="200" cy="106" r="9" fill="#FFFFFF" fill-opacity=".8"/></g><g transform="rotate(42.0 200 390)"><ellipse cx="200" cy="230" rx="24" ry="150" fill="#009E60" opacity=".9"/><path d="M200 390 L200 86" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/><circle cx="200" cy="106" r="9" fill="#FFFFFF" fill-opacity=".8"/></g><g transform="rotate(56.0 200 390)"><ellipse cx="200" cy="230" rx="24" ry="150" fill="#D81B7A" opacity=".9"/><path d="M200 390 L200 86" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/><circle cx="200" cy="106" r="9" fill="#FFFFFF" fill-opacity=".8"/></g><g transform="rotate(70.0 200 390)"><ellipse cx="200" cy="230" rx="24" ry="150" fill="#FCD116" opacity=".9"/><path d="M200 390 L200 86" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/><circle cx="200" cy="106" r="9" fill="#FFFFFF" fill-opacity=".8"/></g><g transform="rotate(84.0 200 390)"><ellipse cx="200" cy="230" rx="24" ry="150" fill="#10A7B8" opacity=".9"/><path d="M200 390 L200 86" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/><circle cx="200" cy="106" r="9" fill="#FFFFFF" fill-opacity=".8"/></g><circle cx="200" cy="390" r="70" fill="#FCD116"/><circle cx="200" cy="390" r="52" fill="#D81B7A"/><circle cx="200" cy="335" r="6" fill="#FFFFFF" transform="rotate(-80 200 390)"/><circle cx="200" cy="335" r="6" fill="#FFFFFF" transform="rotate(-60 200 390)"/><circle cx="200" cy="335" r="6" fill="#FFFFFF" transform="rotate(-40 200 390)"/><circle cx="200" cy="335" r="6" fill="#FFFFFF" transform="rotate(-20 200 390)"/><circle cx="200" cy="335" r="6" fill="#FFFFFF" transform="rotate(0 200 390)"/><circle cx="200" cy="335" r="6" fill="#FFFFFF" transform="rotate(20 200 390)"/><circle cx="200" cy="335" r="6" fill="#FFFFFF" transform="rotate(40 200 390)"/><circle cx="200" cy="335" r="6" fill="#FFFFFF" transform="rotate(60 200 390)"/><circle cx="200" cy="335" r="6" fill="#FFFFFF" transform="rotate(80 200 390)"/></svg>
+  <div class="mas-inner">
+    <span class="kicker">Road to 50</span>
+    <h2 id="mas-title">Vincy Mas 2027</h2>
+    <p class="dates">25 June to 6 July 2027 · Kingstown, St. Vincent</p>
+    <div class="digits" id="mas-digits" role="timer" aria-live="off">
+      <div class="digit"><span class="num" id="d-days">--</span><span class="unit">Days</span></div>
+      <div class="digit"><span class="num" id="d-hours">--</span><span class="unit">Hours</span></div>
+      <div class="digit"><span class="num" id="d-mins">--</span><span class="unit">Minutes</span></div>
+      <div class="digit"><span class="num" id="d-secs">--</span><span class="unit">Seconds</span></div>
+    </div>
+    <p class="why" id="mas-why">Fifty years since Carnival moved from the days before Lent to the summer. Soca and calypso, steel pan, J'ouvert at first light and mas bands flooding the streets of Kingstown.</p>
+    <div class="mas-actions">
+      <a class="btn btn-gold" href="festivals.html">Festival calendar</a>
+      <a class="btn btn-white" href="culture.html">Our culture</a>
+    </div>
+  </div>
+</section>
+
 <div class="wrap">
-  <section class="celebrate" id="celebrate" aria-labelledby="celebrate-title">
-    <div class="flag-stripe" aria-hidden="true"><span class="s-blue"></span><span class="s-gold"></span><span class="s-green"></span></div>
-    <div class="celebrate-body">
+  <section aria-labelledby="life-title">
+    <div class="section-intro">
+      <span class="kicker">Island life</span>
+      <h2 id="life-title">Volcano mornings, lagoon afternoons, soca nights</h2>
+      <p class="lede">St. Vincent and the Grenadines runs from rainforest peaks to tiny sandbar cays. Take it slow, and say good morning to everybody.</p>
+    </div>
+    <div class="life-grid">
+      <a class="life-card sky-day" href="things-to-do.html"><svg class="scene" viewBox="0 0 1440 480" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+<defs>
+<linearGradient id="skyl1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--sky1)"/><stop offset=".45" style="stop-color:var(--sky2)"/><stop offset=".78" style="stop-color:var(--sky3)"/><stop offset="1" style="stop-color:var(--sky4)"/></linearGradient>
+<linearGradient id="seal1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--sea1)"/><stop offset="1" style="stop-color:var(--sea2)"/></linearGradient>
+<radialGradient id="glowl1"><stop offset="0" style="stop-color:var(--sun);stop-opacity:.7"/><stop offset="1" style="stop-color:var(--sun);stop-opacity:0"/></radialGradient>
+</defs>
+<rect width="1440" height="480" fill="url(#skyl1)"/>
+<circle cx="790" cy="350" r="230" fill="url(#glowl1)"/>
+<circle cx="790" cy="356" r="60" style="fill:var(--sun)"/>
+<path d="M120 366 c40-18 80-22 120-8 c24-12 60-12 84 4 c30-10 58-8 80 4 Z" style="fill:var(--far)" opacity=".75"/>
+<path d="M1230 366 c18-12 42-16 64-6 c14-8 34-8 50 6 Z" style="fill:var(--far)" opacity=".75"/>
+
+<rect y="364" width="1440" height="116" fill="url(#seal1)"/>
+<g style="stroke:var(--sun)" stroke-width="3" stroke-linecap="round" opacity=".55"><path d="M730 382h120M750 398h80M716 414h148M760 432h60M738 452h104"/></g>
+<g stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity=".18"><path d="M200 400h60M420 430h90M640 410h50M300 460h70M1240 420h60M760 456h80"/></g>
+<g transform="translate(70 486) scale(1.0 1.0)" style="fill:var(--palm);stroke:var(--palm)"><path d="M0 0 C 2 -60 -6 -120 -26 -178" fill="none" stroke-width="13" stroke-linecap="round"/><path d="M-26 -178 C -66 -198 -110 -190 -140 -158 C -100 -176 -62 -180 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -56 -220 -92 -236 -126 -230 C -86 -216 -54 -198 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -14 -226 26 -248 70 -242 C 30 -228 -2 -206 -26 -178 Z" stroke="none"/><path d="M-26 -178 C 20 -194 62 -180 90 -148 C 52 -168 12 -174 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -30 -220 -22 -252 0 -276 C -10 -240 -16 -208 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -60 -168 -84 -140 -92 -108 C -72 -138 -50 -160 -26 -178 Z" stroke="none"/></g><g transform="translate(1395 486) scale(-0.85 0.85)" style="fill:var(--palm);stroke:var(--palm)"><path d="M0 0 C 2 -60 -6 -120 -26 -178" fill="none" stroke-width="13" stroke-linecap="round"/><path d="M-26 -178 C -66 -198 -110 -190 -140 -158 C -100 -176 -62 -180 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -56 -220 -92 -236 -126 -230 C -86 -216 -54 -198 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -14 -226 26 -248 70 -242 C 30 -228 -2 -206 -26 -178 Z" stroke="none"/><path d="M-26 -178 C 20 -194 62 -180 90 -148 C 52 -168 12 -174 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -30 -220 -22 -252 0 -276 C -10 -240 -16 -208 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -60 -168 -84 -140 -92 -108 C -72 -138 -50 -160 -26 -178 Z" stroke="none"/></g><g transform="translate(640 492) scale(1.05 1.05)" style="fill:var(--palm);stroke:var(--palm)"><path d="M0 0 C 2 -60 -6 -120 -26 -178" fill="none" stroke-width="13" stroke-linecap="round"/><path d="M-26 -178 C -66 -198 -110 -190 -140 -158 C -100 -176 -62 -180 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -56 -220 -92 -236 -126 -230 C -86 -216 -54 -198 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -14 -226 26 -248 70 -242 C 30 -228 -2 -206 -26 -178 Z" stroke="none"/><path d="M-26 -178 C 20 -194 62 -180 90 -148 C 52 -168 12 -174 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -30 -220 -22 -252 0 -276 C -10 -240 -16 -208 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -60 -168 -84 -140 -92 -108 C -72 -138 -50 -160 -26 -178 Z" stroke="none"/></g>
+</svg><div class="txt"><h3>Beaches and reefs</h3><p>Swim with turtles in the Tobago Cays, snorkel Canouan's barrier reef, dive the "Critter Capital of the Caribbean".</p></div></a>
+      <a class="life-card sky-forest" href="island.html?id=st-vincent"><svg class="scene" viewBox="0 0 1440 480" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+<defs>
+<linearGradient id="skyl2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--sky1)"/><stop offset=".45" style="stop-color:var(--sky2)"/><stop offset=".78" style="stop-color:var(--sky3)"/><stop offset="1" style="stop-color:var(--sky4)"/></linearGradient>
+<linearGradient id="seal2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--sea1)"/><stop offset="1" style="stop-color:var(--sea2)"/></linearGradient>
+<radialGradient id="glowl2"><stop offset="0" style="stop-color:var(--sun);stop-opacity:.7"/><stop offset="1" style="stop-color:var(--sun);stop-opacity:0"/></radialGradient>
+</defs>
+<rect width="1440" height="480" fill="url(#skyl2)"/>
+<circle cx="700" cy="350" r="230" fill="url(#glowl2)"/>
+<circle cx="700" cy="356" r="60" style="fill:var(--sun)"/>
+<path d="M120 366 c40-18 80-22 120-8 c24-12 60-12 84 4 c30-10 58-8 80 4 Z" style="fill:var(--far)" opacity=".75"/>
+<path d="M1230 366 c18-12 42-16 64-6 c14-8 34-8 50 6 Z" style="fill:var(--far)" opacity=".75"/>
+<path d="M560 366 C 660 346 760 262 838 190 L 862 202 L 886 188 C 960 250 1060 334 1200 366 Z" style="fill:var(--land)"/><path d="M838 190 L 862 202 L 886 188 L 874 206 L 852 208 Z" style="fill:var(--sky3)" opacity=".35"/>
+<rect y="364" width="1440" height="116" fill="url(#seal2)"/>
+<g style="stroke:var(--sun)" stroke-width="3" stroke-linecap="round" opacity=".55"><path d="M640 382h120M660 398h80M626 414h148M670 432h60M648 452h104"/></g>
+<g stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity=".18"><path d="M200 400h60M420 430h90M640 410h50M300 460h70M1240 420h60M760 456h80"/></g>
+<g transform="translate(70 486) scale(1.0 1.0)" style="fill:var(--palm);stroke:var(--palm)"><path d="M0 0 C 2 -60 -6 -120 -26 -178" fill="none" stroke-width="13" stroke-linecap="round"/><path d="M-26 -178 C -66 -198 -110 -190 -140 -158 C -100 -176 -62 -180 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -56 -220 -92 -236 -126 -230 C -86 -216 -54 -198 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -14 -226 26 -248 70 -242 C 30 -228 -2 -206 -26 -178 Z" stroke="none"/><path d="M-26 -178 C 20 -194 62 -180 90 -148 C 52 -168 12 -174 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -30 -220 -22 -252 0 -276 C -10 -240 -16 -208 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -60 -168 -84 -140 -92 -108 C -72 -138 -50 -160 -26 -178 Z" stroke="none"/></g><g transform="translate(1395 486) scale(-0.85 0.85)" style="fill:var(--palm);stroke:var(--palm)"><path d="M0 0 C 2 -60 -6 -120 -26 -178" fill="none" stroke-width="13" stroke-linecap="round"/><path d="M-26 -178 C -66 -198 -110 -190 -140 -158 C -100 -176 -62 -180 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -56 -220 -92 -236 -126 -230 C -86 -216 -54 -198 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -14 -226 26 -248 70 -242 C 30 -228 -2 -206 -26 -178 Z" stroke="none"/><path d="M-26 -178 C 20 -194 62 -180 90 -148 C 52 -168 12 -174 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -30 -220 -22 -252 0 -276 C -10 -240 -16 -208 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -60 -168 -84 -140 -92 -108 C -72 -138 -50 -160 -26 -178 Z" stroke="none"/></g>
+</svg><div class="txt"><h3>Rainforest and volcano</h3><p>Waterfalls, the Vermont Nature Trail and its parrots, and La Soufrière rising over it all.</p></div></a>
+      <a class="life-card sky-night" href="culture.html"><svg class="scene" viewBox="0 0 1440 480" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+<defs>
+<linearGradient id="skyl3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--sky1)"/><stop offset=".45" style="stop-color:var(--sky2)"/><stop offset=".78" style="stop-color:var(--sky3)"/><stop offset="1" style="stop-color:var(--sky4)"/></linearGradient>
+<linearGradient id="seal3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--sea1)"/><stop offset="1" style="stop-color:var(--sea2)"/></linearGradient>
+<radialGradient id="glowl3"><stop offset="0" style="stop-color:var(--sun);stop-opacity:.7"/><stop offset="1" style="stop-color:var(--sun);stop-opacity:0"/></radialGradient>
+</defs>
+<rect width="1440" height="480" fill="url(#skyl3)"/>
+<circle cx="780" cy="350" r="230" fill="url(#glowl3)"/>
+<circle cx="780" cy="356" r="60" style="fill:var(--sun)"/>
+<path d="M120 366 c40-18 80-22 120-8 c24-12 60-12 84 4 c30-10 58-8 80 4 Z" style="fill:var(--far)" opacity=".75"/>
+<path d="M1230 366 c18-12 42-16 64-6 c14-8 34-8 50 6 Z" style="fill:var(--far)" opacity=".75"/>
+
+<rect y="364" width="1440" height="116" fill="url(#seal3)"/>
+<g style="stroke:var(--sun)" stroke-width="3" stroke-linecap="round" opacity=".55"><path d="M720 382h120M740 398h80M706 414h148M750 432h60M728 452h104"/></g>
+<g stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity=".18"><path d="M200 400h60M420 430h90M640 410h50M300 460h70M1240 420h60M760 456h80"/></g>
+<g transform="translate(70 486) scale(1.0 1.0)" style="fill:var(--palm);stroke:var(--palm)"><path d="M0 0 C 2 -60 -6 -120 -26 -178" fill="none" stroke-width="13" stroke-linecap="round"/><path d="M-26 -178 C -66 -198 -110 -190 -140 -158 C -100 -176 -62 -180 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -56 -220 -92 -236 -126 -230 C -86 -216 -54 -198 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -14 -226 26 -248 70 -242 C 30 -228 -2 -206 -26 -178 Z" stroke="none"/><path d="M-26 -178 C 20 -194 62 -180 90 -148 C 52 -168 12 -174 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -30 -220 -22 -252 0 -276 C -10 -240 -16 -208 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -60 -168 -84 -140 -92 -108 C -72 -138 -50 -160 -26 -178 Z" stroke="none"/></g><g transform="translate(1395 486) scale(-0.85 0.85)" style="fill:var(--palm);stroke:var(--palm)"><path d="M0 0 C 2 -60 -6 -120 -26 -178" fill="none" stroke-width="13" stroke-linecap="round"/><path d="M-26 -178 C -66 -198 -110 -190 -140 -158 C -100 -176 -62 -180 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -56 -220 -92 -236 -126 -230 C -86 -216 -54 -198 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -14 -226 26 -248 70 -242 C 30 -228 -2 -206 -26 -178 Z" stroke="none"/><path d="M-26 -178 C 20 -194 62 -180 90 -148 C 52 -168 12 -174 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -30 -220 -22 -252 0 -276 C -10 -240 -16 -208 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -60 -168 -84 -140 -92 -108 C -72 -138 -50 -160 -26 -178 Z" stroke="none"/></g><g transform="translate(640 492) scale(1.05 1.05)" style="fill:var(--palm);stroke:var(--palm)"><path d="M0 0 C 2 -60 -6 -120 -26 -178" fill="none" stroke-width="13" stroke-linecap="round"/><path d="M-26 -178 C -66 -198 -110 -190 -140 -158 C -100 -176 -62 -180 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -56 -220 -92 -236 -126 -230 C -86 -216 -54 -198 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -14 -226 26 -248 70 -242 C 30 -228 -2 -206 -26 -178 Z" stroke="none"/><path d="M-26 -178 C 20 -194 62 -180 90 -148 C 52 -168 12 -174 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -30 -220 -22 -252 0 -276 C -10 -240 -16 -208 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -60 -168 -84 -140 -92 -108 C -72 -138 -50 -160 -26 -178 Z" stroke="none"/></g>
+</svg><div class="txt"><h3>Carnival and culture</h3><p>Vincy Mas, Nine Mornings, Garifuna heritage and independence since 1979.</p></div></a>
+      <a class="life-card sky-dawn" href="festivals.html"><svg class="scene" viewBox="0 0 1440 480" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+<defs>
+<linearGradient id="skyl4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--sky1)"/><stop offset=".45" style="stop-color:var(--sky2)"/><stop offset=".78" style="stop-color:var(--sky3)"/><stop offset="1" style="stop-color:var(--sky4)"/></linearGradient>
+<linearGradient id="seal4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--sea1)"/><stop offset="1" style="stop-color:var(--sea2)"/></linearGradient>
+<radialGradient id="glowl4"><stop offset="0" style="stop-color:var(--sun);stop-opacity:.7"/><stop offset="1" style="stop-color:var(--sun);stop-opacity:0"/></radialGradient>
+</defs>
+<rect width="1440" height="480" fill="url(#skyl4)"/>
+<circle cx="760" cy="350" r="230" fill="url(#glowl4)"/>
+<circle cx="760" cy="356" r="60" style="fill:var(--sun)"/>
+<path d="M120 366 c40-18 80-22 120-8 c24-12 60-12 84 4 c30-10 58-8 80 4 Z" style="fill:var(--far)" opacity=".75"/>
+<path d="M1230 366 c18-12 42-16 64-6 c14-8 34-8 50 6 Z" style="fill:var(--far)" opacity=".75"/>
+<path d="M560 366 C 660 346 760 262 838 190 L 862 202 L 886 188 C 960 250 1060 334 1200 366 Z" style="fill:var(--land)"/><path d="M838 190 L 862 202 L 886 188 L 874 206 L 852 208 Z" style="fill:var(--sky3)" opacity=".35"/>
+<rect y="364" width="1440" height="116" fill="url(#seal4)"/>
+<g style="stroke:var(--sun)" stroke-width="3" stroke-linecap="round" opacity=".55"><path d="M700 382h120M720 398h80M686 414h148M730 432h60M708 452h104"/></g>
+<g stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity=".18"><path d="M200 400h60M420 430h90M640 410h50M300 460h70M1240 420h60M760 456h80"/></g>
+<g transform="translate(70 486) scale(1.0 1.0)" style="fill:var(--palm);stroke:var(--palm)"><path d="M0 0 C 2 -60 -6 -120 -26 -178" fill="none" stroke-width="13" stroke-linecap="round"/><path d="M-26 -178 C -66 -198 -110 -190 -140 -158 C -100 -176 -62 -180 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -56 -220 -92 -236 -126 -230 C -86 -216 -54 -198 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -14 -226 26 -248 70 -242 C 30 -228 -2 -206 -26 -178 Z" stroke="none"/><path d="M-26 -178 C 20 -194 62 -180 90 -148 C 52 -168 12 -174 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -30 -220 -22 -252 0 -276 C -10 -240 -16 -208 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -60 -168 -84 -140 -92 -108 C -72 -138 -50 -160 -26 -178 Z" stroke="none"/></g><g transform="translate(1395 486) scale(-0.85 0.85)" style="fill:var(--palm);stroke:var(--palm)"><path d="M0 0 C 2 -60 -6 -120 -26 -178" fill="none" stroke-width="13" stroke-linecap="round"/><path d="M-26 -178 C -66 -198 -110 -190 -140 -158 C -100 -176 -62 -180 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -56 -220 -92 -236 -126 -230 C -86 -216 -54 -198 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -14 -226 26 -248 70 -242 C 30 -228 -2 -206 -26 -178 Z" stroke="none"/><path d="M-26 -178 C 20 -194 62 -180 90 -148 C 52 -168 12 -174 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -30 -220 -22 -252 0 -276 C -10 -240 -16 -208 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -60 -168 -84 -140 -92 -108 C -72 -138 -50 -160 -26 -178 Z" stroke="none"/></g>
+</svg><div class="txt"><h3>Festivals all year</h3><p>Blues on Mustique, regattas in Bequia, Easterval on Union and Christmas lights in Kingstown.</p></div></a>
+    </div>
+  </section>
+</div>
+
+<section class="food-band" aria-labelledby="food-title">
+  <div class="wrap">
+    <div class="section-intro">
+      <span class="kicker">Taste of Vincy</span>
+      <h2 id="food-title">Eat like you're home</h2>
+    </div>
+    <ul class="food-grid">
+      <li class="food star"><h3>Roasted breadfruit and fried jackfish</h3><p>The national dish. Breadfruit charred over an open fire, with jackfish marinated in lime, garlic and herbs and fried crisp. Breadfruit arrived with Captain Bligh in 1793 and never left.</p></li>
+      <li class="food" style="--accent:#009E60"><h3>Callaloo soup</h3><p>Thick and velvety, made with dasheen leaves, coconut milk, okra and ground provisions.</p></li>
+      <li class="food" style="--accent:#D81B7A"><h3>Madongo dumplings</h3><p>Chewy dumplings of local arrowroot, coconut, brown sugar and nutmeg.</p></li>
+      <li class="food" style="--accent:#FF9F1C"><h3>Banana fritters</h3><p>Fried banana batter with nutmeg, crisp outside and soft inside.</p></li>
+      <li class="food" style="--accent:#10A7B8"><h3>Hairoun and Sunset</h3><p>Hairoun, the local lager from St. Vincent Brewery, and Sunset rum from St. Vincent Distillers, including the famously strong overproof.</p></li>
+    </ul>
+  </div>
+</section>
+
+<div class="wrap">
+  <section aria-labelledby="move-title">
+    <div class="section-intro">
+      <span class="kicker">Getting around</span>
+      <h2 id="move-title">Boats, taxis and directions</h2>
+    </div>
+    <div class="tools-row">
       <div>
-        <h2 id="celebrate-title">Proudly Vincentian</h2>
-        <p id="celebrate-text"></p>
-        <a class="btn btn-small" href="culture.html">Our independence and culture</a>
-      </div>
-      <div class="celebrate-count" id="celebrate-count"></div>
-    </div>
-  </section>
-
-  <section class="hop" aria-labelledby="hop-title">
-    <div>
-      <h2 id="hop-title">Island hop, north to south</h2>
-      <p class="lede">The ferries run down the chain from Kingstown, so that's the order the islands are listed in. Pick one to explore.</p>
-      <div class="ferry-card" id="next-ferry">
-        <div class="ferry-top">
-          <div>
-            <h3 class="ferry-h" id="ferry-title">Next boat from <span id="nf-from">Kingstown</span> to <span id="nf-to">Bequia</span></h3>
-            <div class="when" id="nf-when">…</div>
-            <p class="detail" id="nf-detail"></p>
-            <p class="after" id="nf-after"></p>
+        <div class="ferry-card" id="next-ferry">
+          <div class="ferry-top">
+            <div>
+              <h3 class="ferry-h" id="ferry-title">Next boat from <span id="nf-from">Kingstown</span> to <span id="nf-to">Bequia</span></h3>
+              <div class="when" id="nf-when">…</div>
+              <p class="detail" id="nf-detail"></p>
+              <p class="after" id="nf-after"></p>
+            </div>
+            <div class="dir-switch" role="group" aria-label="Direction">
+              <button type="button" data-from="Kingstown" aria-pressed="true">From Kingstown</button>
+              <button type="button" data-from="Bequia" aria-pressed="false">From Bequia</button>
+            </div>
           </div>
-          <div class="dir-switch" role="group" aria-label="Direction">
-            <button type="button" data-from="Kingstown" aria-pressed="true">From Kingstown</button>
-            <button type="button" data-from="Bequia" aria-pressed="false">From Bequia</button>
+          <div class="route-track" aria-hidden="true">
+            <div class="line"></div>
+            <span class="port from" id="nf-port-from">Kingstown</span>
+            <span class="port to" id="nf-port-to">Bequia</span>
+            <div class="ferry-boat" id="nf-boat"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M30 6v34h-20z" fill="#FFFFFF"/><path d="M34 12v28h16z" fill="#D81B7A"/><path d="M8 44h48l-7 10H15z" fill="#FCD116"/><path d="M32 4v40" stroke="#FFFFFF" stroke-width="2.5"/></svg></div>
           </div>
         </div>
-        <div class="route-track" aria-hidden="true">
-          <div class="line"></div>
-          <span class="port from" id="nf-port-from">Kingstown</span>
-          <span class="port to" id="nf-port-to">Bequia</span>
-          <div class="ferry-boat" id="nf-boat"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M30 6v34h-20z" fill="#FFFFFF" stroke="#0B3D5C" stroke-width="2.5" stroke-linejoin="round"/><path d="M34 12v28h16z" fill="#FF5C8A" stroke="#0B3D5C" stroke-width="2.5" stroke-linejoin="round"/><path d="M8 44h48l-7 10H15z" fill="#0B3D5C"/><path d="M32 4v40" stroke="#0B3D5C" stroke-width="2.5"/></svg></div>
-        </div>
+        <p class="footnote">The boat sails across in the two hours before departure. <a href="ferries.html">All ferry times</a></p>
       </div>
-      <p class="footnote">The boat sails across in the two hours before departure. <a href="ferries.html">All ferry times</a></p>
-    </div>
-    <ol class="chain" id="chain" aria-label="Islands from north to south"></ol>
-  </section>
-
-  <section aria-labelledby="explore-title">
-    <h2 id="explore-title">What are you in the mood for?</h2>
-    <div class="tiles">
-      <a class="tile big photo-tile" href="things-to-do.html" style="--photo:url('https://images.unsplash.com/photo-1653730442000-c1514b290be3?auto=format&fit=crop&w=1800&q=70')"><div><h3>Things to do</h3><p>32 must-dos to tick off, waterfalls and trails, and some of the Caribbean's best dive sites.</p></div></a>
-      <a class="tile t-pink" href="stay.html"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 38V12M5 30h38v8M43 30v-6a6 6 0 0 0-6-6H22v12"/><circle cx="13" cy="23" r="4"/></svg><div><h3>Stay</h3><p>Resorts, guest houses, villas and apartments.</p></div></a>
-      <a class="tile t-mango" href="festivals.html"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="24" cy="16" rx="17" ry="7"/><path d="M7 16v14c0 4 8 8 17 8s17-4 17-8V16"/><circle cx="18" cy="15" r="2.5"/><circle cx="29" cy="14" r="2.5"/><circle cx="24" cy="19" r="2"/></svg><div><h3>Festivals</h3><p>Vincy Mas, Nine Mornings, regattas.</p></div></a>
-      <a class="tile t-leaf" href="map.html"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 44s14-13 14-24a14 14 0 0 0-28 0c0 11 14 24 14 24z"/><circle cx="24" cy="20" r="5"/></svg><div><h3>Near me</h3><p>GPS map and directions.</p></div></a>
-      <a class="tile t-purple" href="taxis.html"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 32v-7l5-10h26l5 10v7z"/><path d="M6 25h36"/><circle cx="14" cy="34" r="4"/><circle cx="34" cy="34" r="4"/><path d="M19 10h10"/></svg><div><h3>Taxis</h3><p>326 approved drivers, tap to call.</p></div></a>
+      <div class="tool-list">
+        <a class="tool-link" href="taxis.html"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 32v-7l5-10h26l5 10v7z"/><path d="M6 25h36"/><circle cx="14" cy="34" r="4"/><circle cx="34" cy="34" r="4"/></svg><div><strong>Approved taxis</strong><span>326 tourism-approved drivers on St. Vincent and Bequia, tap to call.</span></div></a>
+        <a class="tool-link" href="map.html"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 44s14-13 14-24a14 14 0 0 0-28 0c0 11 14 24 14 24z"/><circle cx="24" cy="20" r="5"/></svg><div><strong>GPS map and near me</strong><span>Beaches, falls, forts and ferry docks with one-tap directions.</span></div></a>
+        <a class="tool-link" href="stay.html"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 38V12M5 30h38v8M43 30v-6a6 6 0 0 0-6-6H22v12"/><circle cx="13" cy="23" r="4"/></svg><div><strong>Places to stay</strong><span>Resorts, guest houses, villas and apartments.</span></div></a>
+        <a class="tool-link" href="getting-here.html"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M44 10L4 24l14 4 4 14 6-10 10 6z"/><path d="M18 28l26-18"/></svg><div><strong>Getting here</strong><span>Flights into Argyle, island airports and entry rules.</span></div></a>
+      </div>
     </div>
   </section>
 
   <section aria-labelledby="fact-title">
-    <div class="fact-card">
-      <div class="bubble" aria-hidden="true">?</div>
-      <div>
-        <h2 id="fact-title">Did you know?</h2>
-        <p class="fact" id="fact" aria-live="polite"></p>
-      </div>
-      <button type="button" class="btn" id="next-fact">Tell me another</button>
+    <div class="fact-strip">
+      <span class="k" id="fact-title">Did you know?</span>
+      <p class="fact" id="fact" aria-live="polite"></p>
+      <button type="button" class="btn btn-small btn-gold" id="next-fact">Another one</button>
     </div>
   </section>
 
@@ -122,19 +254,19 @@
 </div>
 
 </main>
-<svg class="footer-wave" viewBox="0 0 1440 50" preserveAspectRatio="none" aria-hidden="true"><path fill="#0B3D5C" d="M0,30 C240,0 480,50 720,25 C960,0 1200,45 1440,20 L1440,50 L0,50 Z"/></svg>
+<div class="confetti-edge" aria-hidden="true"></div>
 <footer class="footer">
   <div class="wrap">
     <span class="brand-foot">Vincy Vibes</span>
     <div class="stripe" aria-hidden="true"><span class="s-blue"></span><span class="s-gold"></span><span class="s-green"></span></div>
-    <p><strong>Vincy Vibes is an unofficial, fan-made guide</strong> and is not affiliated with the St. Vincent and the Grenadines Tourism Authority. Information comes from <a href="https://discoversvg.com/">discoversvg.com</a> and Wikipedia, checked October 2026. Schedules, phone numbers and opening times change, so confirm before you travel.</p>
-    <p>Photos from <a href="https://unsplash.com/">Unsplash</a>, credited on each page. Map data &copy; OpenStreetMap contributors. Designed and built by Jody-Ann Trimmingham.</p>
+    <p><strong>Vincy Vibes is an unofficial, fan-made guide</strong> and is not affiliated with the St. Vincent and the Grenadines Tourism Authority. Information comes from <a href="https://discoversvg.com/">discoversvg.com</a>, government sources, local news and Wikipedia, checked October 2026. Schedules, phone numbers and event dates change, so confirm before you travel.</p>
+    <p>All illustrations are original. Map data &copy; OpenStreetMap contributors. Designed and built by Jody-Ann Trimmingham.</p>
   </div>
 </footer>
 <script src="js/data/islands.js"></script>
-<script src="js/data/photos.js"></script>
 <script src="js/site.js"></script>
 <script src="js/data/ferries.js"></script>
+<script src="js/hop.js"></script>
 <script src="js/home.js"></script>
 </body>
 </html>

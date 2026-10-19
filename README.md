@@ -1,115 +1,109 @@
 # Vincy Vibes
 
-A fun, unofficial tourism guide to **St. Vincent and the Grenadines**: island guides, a map with GPS directions, places to stay, a tick-off bucket list of 32 must-dos, a festival calendar with countdown, live ferry departures and the tourism-approved taxi directory. Built with plain HTML, CSS and JavaScript and hosted free on GitHub Pages.
+An unofficial, festive guide to **St. Vincent and the Grenadines**: carnival energy, island calm. It has an animated island-hopping map, a live Vincy Mas 2027 countdown, food, festivals, culture, places to stay, a GPS map, live ferry departures and the tourism-approved taxi directory. Built with plain HTML, CSS and JavaScript, with original SVG illustrations throughout, and hosted free on GitHub Pages.
 
 **Live site:** https://jody2905.github.io/vincy-vibes/
 
-![Island hop with island-themed bullets and the Independence countdown](docs/screenshots/home-island-hop.png)
+![Home page with the island-hopping map](docs/screenshots/home-island-hop.png)
 
-## Features
+## Highlights
 
-### The islands, north to south
-The home page opens with a full-width photo, an Independence banner with a live countdown (it switches to a Vincy Mas 2027 countdown after October), and the islands listed as a ferry route from St. Vincent down to Petit St. Vincent. Each island has its own illustrated bullet: a volcano for St. Vincent, a sailboat for Bequia, a turtle for the Tobago Cays, Mount Taboi for Union Island. Each island has its own page with an introduction, key facts, highlights, a map of its pins, and how to get there and get around. Islands still recovering from Hurricane Beryl (July 2024) are marked.
+### Island hop: an animated map
+The home page keeps the original layout, with the headline on the left and the islands on the right, but the island list is now an **illustrated, clickable map**. The islands are drawn from real coordinates, with small markers for each one: La Soufrière on St. Vincent, a sailboat for Bequia, a palm and sun for Mustique. Pick an island and a little traveller in a sun hat **sails from Kingstown along the real ferry route** (Kingstown, Bequia, Canouan, Mayreau, Union), leaving a gold wake. The card beside the map shows the distance by sea and how to get there. It works with a mouse, touch, the keyboard, or the island chips under the map, and the animation switches off for visitors who've turned on reduced motion.
 
-### Map with GPS
-- An interactive map (Leaflet + OpenStreetMap) with pins for airports, ferry docks, beaches, sights, nature spots and towns, which you can filter by category
-- Every pin shows its **GPS coordinates** and opens **directions in Google Maps or Apple Maps**
-- **Near me:** with permission, the browser's location sorts every place by distance and shows the closest. The location stays in the browser and is never sent or stored
+![The traveller sailing to the Tobago Cays](docs/screenshots/traveller-sailing.png)
 
-### Independence and culture
-A page celebrating independence (27 October 1979), with the flag drawn in SVG, the national symbols (parrot, Soufrière tree, roasted breadfruit and jackfish, Chatoyer, anthem and motto), **Vincy Mas 2027: Road to 50** (25 June to 6 July 2027) with a countdown, living traditions like Nine Mornings and Garifuna heritage, and a short history timeline.
+### Vincy Mas 2027 countdown
+A full-width carnival band with feather fans and a live **days / hours / minutes / seconds** countdown to **Vincy Mas 2027: Road to 50** (25 June to 6 July 2027), counted in St. Vincent time. In October, an Independence ribbon in the flag's colours counts down to 27 October.
+
+![Vincy Mas 2027 countdown](docs/screenshots/vincy-mas-countdown.png)
+
+### The whole island experience
+- **Island life:** beaches and reefs, rainforest and volcano, carnival and culture, festivals
+- **Taste of Vincy:** roasted breadfruit and fried jackfish (the national dish), callaloo soup, madongo dumplings, banana fritters, Hairoun and Sunset rum
+- **Independence and culture:** the flag, national symbols, Vincy Mas, Nine Mornings, Garifuna heritage and a short history
 
 ![Independence and culture](docs/screenshots/culture.png)
 
-### Places to stay
-38 resorts, hotels, apartments, guest houses, inns and villas from the Discover SVG listings. You can filter them by island and type or search by name or area, and each listing has tap-to-call numbers and a website link.
+### Festivals, checked
+A month-by-month calendar with a countdown to the next big date. **Every event was checked against recent local news or official sources** (October 2026):
 
-![Places to stay](docs/screenshots/stay.png)
+| Event | Confirmed by |
+|---|---|
+| Bequia Music Festival (2026: 24 Jan to 1 Feb) | realgrenadines.com |
+| Mustique Blues Festival (2026: 21 Jan to 4 Feb) | basilsbar.com, Citywealth |
+| SVG Sailing Week and the revived Bequia Easter Regatta (April 2025) | Caribbean Compass |
+| Easterval, Union Island (2025: 14 to 20 April) | insandoutsofsvg.com |
+| Vincy Mas 2027 (25 June to 6 July) | Official save-the-date, iWitness News |
+| Nine Nights of Lights, Botanic Gardens (2025: 15 to 23 Dec) | St Vincent Times |
+| Nine Mornings (2025 launch at Heritage Square, 14 Dec) | One News St Vincent |
 
-### Things to do: a bucket list
-The official "32 Must Do in SVG" as postcards you can **tick off**. Progress is saved in your browser, so you can keep track during a trip. You can filter by category (eat and drink, on the water, nature, culture, shopping) or island. The page also has waterfalls, trails and gardens, and top dive sites in the "Critter Capital of the Caribbean".
-
-![Bucket list](docs/screenshots/bucket-list.png)
-
-### Festivals
-A month-by-month calendar of Vincy Mas, Nine Mornings, the Bequia Easter Regatta, the Mustique Blues Festival and more, with a **countdown to the next big date** worked out in St. Vincent time.
+Removed because they couldn't be confirmed as still running: the Breadfruit Festival (last news coverage in 2018), the Mayreau Regatta (Mayreau now takes part in SVG Sailing Week), the Union Island Conch Festival and the full-moon kitesurf party.
 
 ![Festivals](docs/screenshots/festivals.png)
 
-### Live ferry departures
-On the home page, a little boat sails along the route as the next departure gets closer. The home page and ferry page work out the **next boats** between Kingstown and Bequia from the published timetables, counting down in St. Vincent time whatever time zone the visitor's phone is set to. The ferry page also has full timetables for the Bequia Express, Bequia Fast Ferry, MV Gem Star II and Jaden Sun.
+### Travel tools
+- **GPS map** (Leaflet + OpenStreetMap): every pin shows coordinates and opens Google Maps or Apple Maps directions; **Near me** sorts places by distance, without the location ever leaving the browser
+- **Live ferry departures** between Kingstown and Bequia, plus full timetables for the southern Grenadines
+- **326 tourism-approved taxi drivers** (270 on St. Vincent, 56 on Bequia), searchable, with tap-to-call
+- **38 places to stay**, filterable by island and type
+- **Bucket list** of 29 must-dos you can tick off (saved in your browser)
 
+![Bucket list](docs/screenshots/bucket-list.png)
 
-### Approved taxi directory
-All **326 tourism-approved taxi drivers** (270 on St. Vincent, 56 on Bequia), searchable by name or number, filterable by island, with tap-to-call numbers. The count always shows the island breakdown.
+### Works on phones
 
-![Taxi directory](docs/screenshots/taxis.png)
-
-### Getting here
-Direct international flights, the five airports, local and regional airlines, entry requirements, money, driving and emergency numbers.
-
-### Fun to use, and works on phones
-Page headers use real photos of the islands from Unsplash (credited on each photo), every island has its own colour, page headers end in waves, and the home page has a sailboat crossing the sea and a "Did you know?" fact you can tap for another. Animations switch off for visitors who've turned on reduced motion. Most people will use the site on a phone while travelling, so every page works on small screens, with a tap-to-open menu.
-
+![On a phone](docs/screenshots/phone.png)
 
 ## How it's built
 
 | Part | How |
 |---|---|
 | Pages | Plain HTML and CSS, no framework or build step |
-| Data | JavaScript files in `js/data/` (islands, map places, taxis, ferries, flights), so the site also works when opened straight from a folder |
-| Map | [Leaflet](https://leafletjs.com/) with OpenStreetMap tiles |
-| GPS | The browser Geolocation API, plus haversine distance in `js/site.js` |
-| Ferry countdown | Converts the current time to St. Vincent time (UTC-4) before comparing with the timetables |
-| Bucket list | Saved with `localStorage`, wrapped so the page still works if the browser blocks storage |
-| Design | Fredoka and Rubik fonts, flag-inspired colours plus one colour per island, hand-drawn SVG icons and waves |
-| Safety | All data shown on the page is HTML-escaped. External links open with `rel="noopener"` |
+| Artwork | Original inline SVG: sunset scenes with La Soufrière and palms, carnival feather fans, island markers, the traveller. No photos, so nothing can fail to load |
+| Island map | `js/hop.js`: projects real latitude and longitude onto the chart, smooths coastlines with Catmull-Rom curves, and animates the traveller along the route with `getPointAtLength` and `requestAnimationFrame` |
+| Countdowns | Computed in St. Vincent time (UTC-4) whatever the visitor's time zone |
+| Data | JavaScript files in `js/data/` (islands, places, taxis, ferries, flights, stays, must-dos, festivals) |
+| GPS | Browser Geolocation API and haversine distance |
+| Safety and access | All data is HTML-escaped; keyboard support and visible focus; reduced motion respected |
+| Design | Bricolage Grotesque and Manrope; Vincy Mas night-indigo and magenta, flag gold and green, sea turquoise and sunset coral |
 | Hosting | GitHub Pages |
 
 ```
-index.html         Home: island chain, sailing ferry countdown, facts
-islands.html       All islands
-island.html        One island (island.html?id=bequia)
-map.html           Map with GPS and near me
-stay.html          Places to stay
-culture.html       Independence, national symbols, Vincy Mas, history
-things-to-do.html  32 must-dos bucket list, nature, diving
-festivals.html     Festival calendar and countdown
-taxis.html         Approved taxi directory
+index.html         Home: island-hop map, Vincy Mas countdown, island life, food, travel tools
+islands.html       All islands         island.html   One island (island.html?id=bequia)
+map.html           GPS map             stay.html     Places to stay
+things-to-do.html  Bucket list, nature, diving
+culture.html       Independence, symbols, Vincy Mas, history
+festivals.html     Verified festival calendar
 ferries.html       Next departures and timetables
+taxis.html         Approved taxi directory
 getting-here.html  Flights, airports, entry rules
-css/style.css      Styles
-js/site.js         Shared helpers (time, distance, directions, map markers)
-js/*.js            One script per page
-js/data/           Site content
+css/style.css      Styles        js/       Scripts (hop.js = island map)
 ```
 
 ## Run it locally
-
-Double-click `index.html`. For the map's "Near me" button, browsers need the page served over `http://localhost` or `https://`:
 
 ```powershell
 python -m http.server 8000
 ```
 
-Then open http://localhost:8000.
+Then open http://localhost:8000. (Opening `index.html` directly also works, but browsers only allow "Near me" over `http://localhost` or `https://`.)
 
 ## Sources
 
-- [discoversvg.com](https://discoversvg.com/) (SVG Tourism Authority): island information, places to stay, 32 must-dos, eco-adventures, dive sites, festivals, taxi list, ferry schedules, flights and entry requirements
-- Festival months from Discover SVG event pages and local news reports; Vincy Mas 2027 dates from the official save-the-date announcement
-- National symbols from the Government of St. Vincent and the Grenadines
-- Photos from [Unsplash](https://unsplash.com/license) by Andre Alexander, George Apodaca, Hugh Whyte, Bradley Wade, Sam Hallett, Christian Lendl, Susy Ross, JR Harris, David Ballinger and Garance de Reynal
-- Wikipedia: island facts and GPS coordinates of towns, airports and landmarks
-- Some beach and dock pins were placed by hand and are marked "approximate" on the map
-- Information checked October 2026
+- [discoversvg.com](https://discoversvg.com/) (SVG Tourism Authority): islands, places to stay, must-dos, eco-adventures, dive sites, taxis, ferries, flights and entry requirements
+- Government of St. Vincent and the Grenadines: national symbols
+- Local news and organisers for festivals (see the table above)
+- Wikipedia: island facts and GPS coordinates; some beach and dock pins are marked "approximate"
 
 ## Roadmap
 
-- [x] Phase 1: islands, map with GPS, taxis, ferries, getting here
-- [x] Phase 2: a more playful design, places to stay, things-to-do bucket list, festival calendar, photo headers, independence and culture
-- [ ] Phase 3: "Which island are you?" quiz, Vincy Mas countdown, day planner
+- [x] Phase 1: islands, GPS map, taxis, ferries, getting here
+- [x] Phase 2: places to stay, bucket list, festivals, independence and culture
+- [x] Redesign: animated island-hopping map, Vincy Mas countdown, illustrated Vincentian theme, verified events
+- [ ] Next: "Which island are you?" quiz and a day planner
 
 ---
 
-*Vincy Vibes is an unofficial, fan-made portfolio project by Jody-Ann Trimmingham and is not affiliated with the St. Vincent and the Grenadines Tourism Authority. Schedules and phone numbers change, so always confirm before you travel.*
+*Vincy Vibes is an unofficial, fan-made portfolio project by Jody-Ann Trimmingham and is not affiliated with the St. Vincent and the Grenadines Tourism Authority. Schedules, phone numbers and event dates change, so always confirm before you travel.*
