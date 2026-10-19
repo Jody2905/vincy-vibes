@@ -1,6 +1,6 @@
 # Vincy Vibes
 
-A fun, unofficial tourism guide to **St. Vincent and the Grenadines**: island guides, a map with GPS directions, the tourism-approved taxi directory, live ferry departures and flight info. Built with plain HTML, CSS and JavaScript and hosted free on GitHub Pages.
+A fun, unofficial tourism guide to **St. Vincent and the Grenadines**: island guides, a map with GPS directions, places to stay, a tick-off bucket list of 32 must-dos, a festival calendar with countdown, live ferry departures and the tourism-approved taxi directory. Built with plain HTML, CSS and JavaScript and hosted free on GitHub Pages.
 
 **Live site:** https://jody2905.github.io/vincy-vibes/
 
@@ -16,8 +16,23 @@ The home page shows the islands as a ferry route, from St. Vincent down to Petit
 - Every pin shows its **GPS coordinates** and opens **directions in Google Maps or Apple Maps**
 - **Near me:** with permission, the browser's location sorts every place by distance and shows the closest. The location stays in the browser and is never sent or stored
 
+### Places to stay
+38 resorts, hotels, apartments, guest houses, inns and villas from the Discover SVG listings. You can filter them by island and type or search by name or area, and each listing has tap-to-call numbers and a website link.
+
+![Places to stay](docs/screenshots/stay.png)
+
+### Things to do: a bucket list
+The official "32 Must Do in SVG" as postcards you can **tick off**. Progress is saved in your browser, so you can keep track during a trip. You can filter by category (eat and drink, on the water, nature, culture, shopping) or island. The page also has waterfalls, trails and gardens, and top dive sites in the "Critter Capital of the Caribbean".
+
+![Bucket list](docs/screenshots/bucket-list.png)
+
+### Festivals
+A month-by-month calendar of Vincy Mas, Nine Mornings, the Bequia Easter Regatta, the Mustique Blues Festival and more, with a **countdown to the next big date** worked out in St. Vincent time.
+
+![Festivals](docs/screenshots/festivals.png)
+
 ### Live ferry departures
-The home page and ferry page work out the **next boats** between Kingstown and Bequia from the published timetables, counting down in St. Vincent time whatever time zone the visitor's phone is set to. The ferry page also has full timetables for the Bequia Express, Bequia Fast Ferry, MV Gem Star II and Jaden Sun.
+On the home page, a little boat sails along the route as the next departure gets closer. The home page and ferry page work out the **next boats** between Kingstown and Bequia from the published timetables, counting down in St. Vincent time whatever time zone the visitor's phone is set to. The ferry page also has full timetables for the Bequia Express, Bequia Fast Ferry, MV Gem Star II and Jaden Sun.
 
 ![Ferry times](docs/screenshots/ferries.png)
 
@@ -29,8 +44,8 @@ All **326 tourism-approved taxi drivers** on St. Vincent and Bequia, searchable 
 ### Getting here
 Direct international flights, the five airports, local and regional airlines, entry requirements, money, driving and emergency numbers.
 
-### Works on phones
-Most visitors will use it on a phone while travelling, so every page is designed for small screens first.
+### Fun to use, and works on phones
+Every island has its own colour, page headers end in waves, and the home page has a sailboat crossing the sea and a "Did you know?" fact you can tap for another. Animations switch off for visitors who've turned on reduced motion. Most people will use the site on a phone while travelling, so every page works on small screens, with a tap-to-open menu.
 
 ![On a phone](docs/screenshots/phone.png)
 
@@ -43,14 +58,19 @@ Most visitors will use it on a phone while travelling, so every page is designed
 | Map | [Leaflet](https://leafletjs.com/) with OpenStreetMap tiles |
 | GPS | The browser Geolocation API, plus haversine distance in `js/site.js` |
 | Ferry countdown | Converts the current time to St. Vincent time (UTC-4) before comparing with the timetables |
+| Bucket list | Saved with `localStorage`, wrapped so the page still works if the browser blocks storage |
+| Design | Fredoka and Rubik fonts, flag-inspired colours plus one colour per island, hand-drawn SVG icons and waves |
 | Safety | All data shown on the page is HTML-escaped. External links open with `rel="noopener"` |
 | Hosting | GitHub Pages |
 
 ```
-index.html         Home: island chain, next ferry, tools, quick facts
+index.html         Home: island chain, sailing ferry countdown, facts
 islands.html       All islands
 island.html        One island (island.html?id=bequia)
 map.html           Map with GPS and near me
+stay.html          Places to stay
+things-to-do.html  32 must-dos bucket list, nature, diving
+festivals.html     Festival calendar and countdown
 taxis.html         Approved taxi directory
 ferries.html       Next departures and timetables
 getting-here.html  Flights, airports, entry rules
@@ -72,7 +92,8 @@ Then open http://localhost:8000.
 
 ## Sources
 
-- [discoversvg.com](https://discoversvg.com/) (SVG Tourism Authority): island information, taxi list, ferry schedules, flights and entry requirements
+- [discoversvg.com](https://discoversvg.com/) (SVG Tourism Authority): island information, places to stay, 32 must-dos, eco-adventures, dive sites, festivals, taxi list, ferry schedules, flights and entry requirements
+- Festival months from Discover SVG event pages and local news reports
 - Wikipedia: island facts and GPS coordinates of towns, airports and landmarks
 - Some beach and dock pins were placed by hand and are marked "approximate" on the map
 - Information checked October 2026
@@ -80,7 +101,7 @@ Then open http://localhost:8000.
 ## Roadmap
 
 - [x] Phase 1: islands, map with GPS, taxis, ferries, getting here
-- [ ] Phase 2: places to stay, things to do, festivals and events
+- [x] Phase 2: a more playful design, places to stay, things-to-do bucket list, festival calendar
 - [ ] Phase 3: "Which island are you?" quiz, Vincy Mas countdown, day planner
 
 ---

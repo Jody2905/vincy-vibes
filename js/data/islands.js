@@ -3,6 +3,7 @@
 window.VV_ISLANDS = [
   {
     id: "st-vincent",
+    color: "#00A86B",
     name: "St. Vincent",
     tagline: "Rainforest, a live volcano and black-sand bays",
     lat: 13.2528, lng: -61.1971, zoom: 11,
@@ -14,7 +15,7 @@ window.VV_ISLANDS = [
       ["Airport", "Argyle International (SVD)"]
     ],
     highlights: [
-      ["La Soufrière", "An active volcano you can hike to the crater rim, through rainforest from the windward (Atlantic) side. It last erupted in 2021, so check the current alert level before you go."],
+      ["La Soufrière", "The active volcano that dominates the north. Its crater trail climbs through rainforest from the windward side, but it erupted in 2021 and authorities currently discourage hiking it, so check before you plan a trip."],
       ["Botanic Gardens", "Started in 1765, one of the oldest botanical gardens in the Western Hemisphere. Look for the breadfruit tree linked to Captain Bligh, and the St. Vincent parrot aviary."],
       ["Fort Charlotte", "Finished in 1806, 601 ft above Kingstown, with views to the Grenadines. Its cannons famously point inland."],
       ["Dark View Falls", "Twin waterfalls on the leeward side, reached by a bamboo bridge over the river."],
@@ -27,6 +28,7 @@ window.VV_ISLANDS = [
   },
   {
     id: "young-island",
+    color: "#00A6C0",
     name: "Young Island",
     tagline: "A private island a few minutes off Villa Beach",
     lat: 13.1306, lng: -61.2093, zoom: 15,
@@ -46,10 +48,11 @@ window.VV_ISLANDS = [
   },
   {
     id: "bequia",
+    color: "#FF5C8A",
     name: "Bequia",
     tagline: "Boat builders, a turtle sanctuary and Admiralty Bay",
     lat: 13.0150, lng: -61.2300, zoom: 13,
-    intro: "Say it \"BECK-way\". The second-largest island, an easy ferry ride from Kingstown, with a long tradition of wooden boat building and sailing. Port Elizabeth sits on Admiralty Bay, one of the Caribbean's favourite yacht anchorages.",
+    intro: "The second-largest island, an easy ferry ride from Kingstown, with a long tradition of wooden boat building and sailing. Port Elizabeth sits on Admiralty Bay, one of the Caribbean's favourite yacht anchorages.",
     facts: [
       ["Size", "7 sq mi (18 km²)"],
       ["People", "About 5,300"],
@@ -69,6 +72,7 @@ window.VV_ISLANDS = [
   },
   {
     id: "mustique",
+    color: "#F29F05",
     name: "Mustique",
     tagline: "Private villas, Basil's Bar and Macaroni Beach",
     lat: 12.8790, lng: -61.1830, zoom: 14,
@@ -91,6 +95,7 @@ window.VV_ISLANDS = [
   },
   {
     id: "canouan",
+    color: "#14B8A6",
     name: "Canouan",
     tagline: "A barrier reef and long white beaches",
     lat: 12.7170, lng: -61.3330, zoom: 13,
@@ -113,6 +118,7 @@ window.VV_ISLANDS = [
   },
   {
     id: "mayreau",
+    color: "#FF7A59",
     name: "Mayreau",
     tagline: "Saltwhistle Bay and the doorstep of the Tobago Cays",
     lat: 12.6400, lng: -61.3900, zoom: 14,
@@ -136,6 +142,7 @@ window.VV_ISLANDS = [
   },
   {
     id: "tobago-cays",
+    color: "#00B8D9",
     name: "Tobago Cays",
     tagline: "Five uninhabited cays and swimming with turtles",
     lat: 12.6317, lng: -61.3550, zoom: 14,
@@ -157,6 +164,7 @@ window.VV_ISLANDS = [
   },
   {
     id: "union-island",
+    color: "#7B5CD6",
     name: "Union Island",
     tagline: "Mount Taboi, kitesurfing and the Clifton waterfront",
     lat: 12.6000, lng: -61.4330, zoom: 14,
@@ -181,6 +189,7 @@ window.VV_ISLANDS = [
   },
   {
     id: "palm-island",
+    color: "#F2B705",
     name: "Palm Island",
     tagline: "A 135-acre island ringed by white sand",
     lat: 12.5850, lng: -61.3950, zoom: 15,
@@ -201,6 +210,7 @@ window.VV_ISLANDS = [
   },
   {
     id: "petit-st-vincent",
+    color: "#E8478B",
     name: "Petit St. Vincent",
     tagline: "The southernmost island of SVG",
     lat: 12.5375, lng: -61.3839, zoom: 15,

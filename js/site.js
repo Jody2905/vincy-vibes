@@ -137,3 +137,42 @@
     }).addTo(map);
   };
 })();
+
+// Phone menu toggle, and helpers shared by the new pages.
+(function () {
+  "use strict";
+  var btn = document.querySelector(".menu-btn");
+  var nav = document.getElementById("main-nav");
+  if (btn && nav) {
+    btn.addEventListener("click", function () {
+      var open = nav.classList.toggle("open");
+      btn.setAttribute("aria-expanded", String(open));
+      btn.textContent = open ? "Close" : "Menu";
+    });
+  }
+
+  var VV = window.VV;
+
+  /** tel: link for a number like "+1 784 458 1600". */
+  VV.tel = function (phone) { return "tel:" + phone.replace(/[^\d+]/g, ""); };
+
+  /** Fill an island <select> with the islands, north to south. */
+  VV.fillIslandSelect = function (select, onlyIds) {
+    window.VV_ISLANDS.forEach(function (isl) {
+      if (onlyIds && onlyIds.indexOf(isl.id) < 0) return;
+      var o = document.createElement("option");
+      o.value = isl.id; o.textContent = isl.name;
+      select.appendChild(o);
+    });
+  };
+
+  /** Small storage wrapper: works even when the browser blocks storage. */
+  VV.store = {
+    get: function (key, fallback) {
+      try { var v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; } catch (e) { return fallback; }
+    },
+    set: function (key, value) {
+      try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) { /* storage blocked: keep going */ }
+    }
+  };
+})();
