@@ -21,8 +21,13 @@
       if (t.name.toLowerCase().indexOf(q) >= 0) return true;
       return qDigits.length >= 3 && t.phones.some(function (p) { return p.replace(/\D/g, "").indexOf(qDigits) >= 0; });
     });
-    document.getElementById("taxi-count").textContent =
-      list.length + (list.length === 1 ? " driver" : " drivers") + (island ? " on " + island : "") + (q ? ' matching "' + input.value.trim() + '"' : "");
+    var sv = list.filter(function (t) { return t.island === "St. Vincent"; }).length;
+    var bq = list.length - sv;
+    var summary = list.length + (list.length === 1 ? " driver" : " drivers");
+    if (q) { summary += ' matching "' + input.value.trim() + '"'; }
+    if (!island && list.length) { summary += ": " + sv + " on St. Vincent and " + bq + " on Bequia"; }
+    else if (island) { summary += " on " + island; }
+    document.getElementById("taxi-count").textContent = summary + ".";
     var ul = document.getElementById("taxi-list");
     if (!list.length) {
       ul.innerHTML = '<li class="empty">No drivers match. Try part of a first or last name.</li>';

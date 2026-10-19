@@ -5,10 +5,34 @@
 
   // Island chain, north to south, each dot in its island colour
   document.getElementById("chain").innerHTML = window.VV_ISLANDS.map(function (isl, i) {
-    return '<li class="' + (i === 0 ? "main" : "") + '" style="--accent:' + isl.color + '"><span class="dot" aria-hidden="true"></span>' +
+    return '<li class="' + (i === 0 ? "main" : "") + '">' + VV.islandIcon(isl) +
       '<a href="island.html?id=' + isl.id + '"><span class="stop-name">' + VV.esc(isl.name) + "</span>" +
       '<span class="stop-tag">' + VV.esc(isl.tagline) + "</span></a></li>";
   }).join("");
+
+  // Celebrate banner: Independence in October, otherwise the countdown to Vincy Mas 2027
+  (function () {
+    var title = document.getElementById("celebrate-title");
+    var text = document.getElementById("celebrate-text");
+    var count = document.getElementById("celebrate-count");
+    var ind = VV.independence();
+    var mas = VV.vincyMas();
+    if (ind.inOctober && ind.days <= 31) {
+      title.textContent = ind.today ? "Happy " + ind.ordinal + " Independence, SVG!" : "Happy " + ind.ordinal + " Independence, SVG";
+      text.textContent = "On 27 October 1979, St. Vincent and the Grenadines became an independent nation. Expect parades, cultural shows and a sea of blue, gold and green.";
+      count.innerHTML = ind.today ? '<span class="big-num">Today!</span>' :
+        '<span class="big-num">' + ind.days + '</span><span class="lbl">' + (ind.days === 1 ? "day" : "days") + " to Independence Day</span>";
+    } else if (!mas.over) {
+      title.textContent = "Vincy Mas 2027: Road to 50";
+      text.textContent = "25 June to 6 July 2027. Fifty years since Carnival moved to the summer: soca, steel pan, J'ouvert and mas bands in Kingstown.";
+      count.innerHTML = mas.on ? '<span class="big-num">It\'s Mas!</span>' :
+        '<span class="big-num">' + mas.days + '</span><span class="lbl">days to Vincy Mas</span>';
+    } else {
+      title.textContent = "Proudly Vincentian";
+      text.textContent = "Independent since 27 October 1979. Discover our national symbols, heroes and festivals.";
+      count.innerHTML = '<span class="big-num">' + (ind.year - 1979) + '</span><span class="lbl">years independent this October</span>';
+    }
+  })();
 
   // Next ferry, with a boat that sails across as departure gets closer
   var from = "Kingstown";

@@ -8,7 +8,7 @@ window.VV_FESTIVALS = [
   { name: "Bequia Easter Regatta", month: 4, island: "bequia", when: "Easter weekend (March or April)", what: "The most popular regatta in the southern Caribbean: local boats, yachts and music." },
   { name: "Easterval", month: 4, island: "union-island", when: "Easter weekend", what: "Union Island's Easter festival in Clifton." },
   { name: "Mayreau Regatta", month: 5, island: "mayreau", when: "Around late April or early May", what: "A small, friendly regatta that reflects Mayreau's close-knit community." },
-  { name: "Vincy Mas", month: 7, island: "st-vincent", when: "Late June to early July. In 2027, Carnival Monday and Tuesday fall on 5 and 6 July", what: "The national Carnival: soca, steel pan, J'ouvert and costumed bands on the streets of Kingstown.", big: true },
+  { name: "Vincy Mas 2027: Road to 50", month: 6, island: "st-vincent", when: "25 June to 6 July 2027", what: "The national Carnival: soca, calypso, steel pan, J'ouvert and costumed bands on the streets of Kingstown. 2027 marks 50 years since Carnival moved from before Lent to June and July in 1977.", big: true },
   { name: "Breadfruit Festival", month: 8, island: "st-vincent", when: "August", what: "Breadfruit cooked every way, in communities across North Leeward." },
   { name: "Independence Day", month: 10, island: "st-vincent", when: "27 October", what: "Celebrating independence in 1979, with parades and events including motorsports." },
   { name: "Nine Mornings", month: 12, island: "st-vincent", when: "16 to 24 December", what: "A uniquely Vincentian Christmas tradition: nine early mornings of street parties, music and sea baths before dawn." },

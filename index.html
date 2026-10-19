@@ -16,67 +16,78 @@
   <div class="wrap topbar-inner">
     <a class="brand" href="index.html"><svg viewBox="0 0 30 30" aria-hidden="true"><path fill="#009E60" d="M8 3l4.5 7L8 17l-4.5-7z"/><path fill="#009E60" d="M22 3l4.5 7L22 17l-4.5-7z"/><path fill="#009E60" d="M15 13l4.5 7L15 27l-4.5-7z"/></svg>Vincy Vibes</a>
     <button type="button" class="menu-btn" aria-expanded="false" aria-controls="main-nav">Menu</button>
-    <nav class="nav" id="main-nav" aria-label="Main"><a href="islands.html">Islands</a><a href="map.html">Map</a><a href="stay.html">Stay</a><a href="things-to-do.html">Things to do</a><a href="festivals.html">Festivals</a><a href="ferries.html">Ferries</a><a href="taxis.html">Taxis</a><a href="getting-here.html">Getting here</a></nav>
+    <nav class="nav" id="main-nav" aria-label="Main"><a href="islands.html">Islands</a><a href="map.html">Map</a><a href="stay.html">Stay</a><a href="things-to-do.html">Things to do</a><a href="culture.html">Culture</a><a href="festivals.html">Festivals</a><a href="ferries.html">Ferries</a><a href="taxis.html">Taxis</a><a href="getting-here.html">Getting here</a></nav>
   </div>
 </header>
 <main>
 
-<div class="hero-band">
-  <div class="sun" aria-hidden="true"></div>
-  <div class="wrap hero">
-    <div>
-      <span class="sticker">Unofficial and proudly Vincy</span>
-      <h1 id="hero-title">Thirty-two islands, one ferry ride at a time.</h1>
-      <p class="lede">A fun guide to St. Vincent and the Grenadines: volcano hikes, turtle lagoons, beach bars, festivals, and how to get between it all.</p>
-      <div class="hero-actions">
-        <a class="btn btn-gold" href="map.html">Open the map</a>
-        <a class="btn btn-quiet" href="things-to-do.html">Start your bucket list</a>
-      </div>
-    </div>
-    <div class="chain-card">
-      <h2>Island hop, north to south</h2>
-      <ol class="chain" id="chain" aria-label="Islands from north to south"></ol>
+<div class="photo-hero" style="--photo:url('https://images.unsplash.com/photo-1635392509670-9b5a8baccbe8?auto=format&fit=crop&w=1800&q=70')">
+  <a class="photo-credit" href="https://unsplash.com/photos/7uNKhDy12_k" target="_blank" rel="noopener">Photo: Andre Alexander / Unsplash</a>
+  <div class="wrap photo-hero-inner">
+    <span class="sticker">Unofficial and proudly Vincy</span>
+    <h1 id="hero-title">Thirty-two islands, one ferry ride at a time.</h1>
+    <p class="lede">A fun guide to St. Vincent and the Grenadines: volcano hikes, turtle lagoons, beach bars, Carnival, and how to get between it all.</p>
+    <div class="hero-actions">
+      <a class="btn btn-gold" href="map.html">Open the map</a>
+      <a class="btn btn-white" href="things-to-do.html">Start your bucket list</a>
     </div>
   </div>
   <div class="sea-scene" aria-hidden="true">
     <div class="boat"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M30 6v34h-20z" fill="#FFFFFF" stroke="#0B3D5C" stroke-width="2.5" stroke-linejoin="round"/><path d="M34 12v28h16z" fill="#FF5C8A" stroke="#0B3D5C" stroke-width="2.5" stroke-linejoin="round"/><path d="M8 44h48l-7 10H15z" fill="#0B3D5C"/><path d="M32 4v40" stroke="#0B3D5C" stroke-width="2.5"/></svg></div>
     <svg class="waves" viewBox="0 0 1440 120" preserveAspectRatio="none">
-      <path fill="#7FDCEB" d="M0,48 C180,18 360,78 540,50 C720,22 900,80 1080,52 C1260,24 1350,44 1440,40 L1440,120 L0,120 Z"/>
+      <path fill="#7FDCEB" fill-opacity=".85" d="M0,48 C180,18 360,78 540,50 C720,22 900,80 1080,52 C1260,24 1350,44 1440,40 L1440,120 L0,120 Z"/>
       <path fill="#00A6C0" d="M0,72 C200,50 380,98 600,74 C820,50 1000,96 1200,76 C1320,64 1400,70 1440,66 L1440,120 L0,120 Z"/>
-      <path fill="#0B3D5C" d="M0,98 C240,82 480,116 720,100 C960,84 1200,114 1440,96 L1440,120 L0,120 Z"/>
+      <path fill="#FFFFFF" d="M0,98 C240,82 480,116 720,100 C960,84 1200,114 1440,96 L1440,120 L0,120 Z"/>
     </svg>
   </div>
 </div>
 
 <div class="wrap">
-  <section aria-labelledby="ferry-title" class="ferry-section">
-    <div class="ferry-card" id="next-ferry">
-      <div class="ferry-top">
-        <div>
-          <h2 id="ferry-title">Next boat from <span id="nf-from">Kingstown</span> to <span id="nf-to">Bequia</span></h2>
-          <div class="when" id="nf-when">…</div>
-          <p class="detail" id="nf-detail"></p>
-          <p class="after" id="nf-after"></p>
-        </div>
-        <div class="dir-switch" role="group" aria-label="Direction">
-          <button type="button" data-from="Kingstown" aria-pressed="true">From Kingstown</button>
-          <button type="button" data-from="Bequia" aria-pressed="false">From Bequia</button>
-        </div>
+  <section class="celebrate" id="celebrate" aria-labelledby="celebrate-title">
+    <div class="flag-stripe" aria-hidden="true"><span class="s-blue"></span><span class="s-gold"></span><span class="s-green"></span></div>
+    <div class="celebrate-body">
+      <div>
+        <h2 id="celebrate-title">Proudly Vincentian</h2>
+        <p id="celebrate-text"></p>
+        <a class="btn btn-small" href="culture.html">Our independence and culture</a>
       </div>
-      <div class="route-track" aria-hidden="true">
-        <div class="line"></div>
-        <span class="port from" id="nf-port-from">Kingstown</span>
-        <span class="port to" id="nf-port-to">Bequia</span>
-        <div class="ferry-boat" id="nf-boat"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M30 6v34h-20z" fill="#FFFFFF" stroke="#0B3D5C" stroke-width="2.5" stroke-linejoin="round"/><path d="M34 12v28h16z" fill="#FF5C8A" stroke="#0B3D5C" stroke-width="2.5" stroke-linejoin="round"/><path d="M8 44h48l-7 10H15z" fill="#0B3D5C"/><path d="M32 4v40" stroke="#0B3D5C" stroke-width="2.5"/></svg></div>
-      </div>
+      <div class="celebrate-count" id="celebrate-count"></div>
     </div>
-    <p class="footnote">The boat sails across as departure gets closer (within two hours). Times in St. Vincent time from the published timetables. <a href="ferries.html">All ferry times</a></p>
+  </section>
+
+  <section class="hop" aria-labelledby="hop-title">
+    <div>
+      <h2 id="hop-title">Island hop, north to south</h2>
+      <p class="lede">The ferries run down the chain from Kingstown, so that's the order the islands are listed in. Pick one to explore.</p>
+      <div class="ferry-card" id="next-ferry">
+        <div class="ferry-top">
+          <div>
+            <h3 class="ferry-h" id="ferry-title">Next boat from <span id="nf-from">Kingstown</span> to <span id="nf-to">Bequia</span></h3>
+            <div class="when" id="nf-when">…</div>
+            <p class="detail" id="nf-detail"></p>
+            <p class="after" id="nf-after"></p>
+          </div>
+          <div class="dir-switch" role="group" aria-label="Direction">
+            <button type="button" data-from="Kingstown" aria-pressed="true">From Kingstown</button>
+            <button type="button" data-from="Bequia" aria-pressed="false">From Bequia</button>
+          </div>
+        </div>
+        <div class="route-track" aria-hidden="true">
+          <div class="line"></div>
+          <span class="port from" id="nf-port-from">Kingstown</span>
+          <span class="port to" id="nf-port-to">Bequia</span>
+          <div class="ferry-boat" id="nf-boat"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M30 6v34h-20z" fill="#FFFFFF" stroke="#0B3D5C" stroke-width="2.5" stroke-linejoin="round"/><path d="M34 12v28h16z" fill="#FF5C8A" stroke="#0B3D5C" stroke-width="2.5" stroke-linejoin="round"/><path d="M8 44h48l-7 10H15z" fill="#0B3D5C"/><path d="M32 4v40" stroke="#0B3D5C" stroke-width="2.5"/></svg></div>
+        </div>
+      </div>
+      <p class="footnote">The boat sails across in the two hours before departure. <a href="ferries.html">All ferry times</a></p>
+    </div>
+    <ol class="chain" id="chain" aria-label="Islands from north to south"></ol>
   </section>
 
   <section aria-labelledby="explore-title">
     <h2 id="explore-title">What are you in the mood for?</h2>
     <div class="tiles">
-      <a class="tile big t-sea" href="things-to-do.html"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 44c0-12 1-20 4-27"/><path d="M28 17c-5-6-13-6-18-2 6 0 11 1 18 2zM28 17c3-7 11-9 16-6-6 1-11 3-16 6zM28 17c-7 0-12 4-14 10 5-4 9-7 14-10zM28 17c6 1 10 6 11 12-4-5-7-8-11-12z"/><path d="M8 44h32"/></svg><div><h3>Things to do</h3><p>32 must-dos to tick off, waterfalls and trails, and some of the Caribbean's best dive sites.</p></div></a>
+      <a class="tile big photo-tile" href="things-to-do.html" style="--photo:url('https://images.unsplash.com/photo-1653730442000-c1514b290be3?auto=format&fit=crop&w=1800&q=70')"><div><h3>Things to do</h3><p>32 must-dos to tick off, waterfalls and trails, and some of the Caribbean's best dive sites.</p></div></a>
       <a class="tile t-pink" href="stay.html"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 38V12M5 30h38v8M43 30v-6a6 6 0 0 0-6-6H22v12"/><circle cx="13" cy="23" r="4"/></svg><div><h3>Stay</h3><p>Resorts, guest houses, villas and apartments.</p></div></a>
       <a class="tile t-mango" href="festivals.html"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="24" cy="16" rx="17" ry="7"/><path d="M7 16v14c0 4 8 8 17 8s17-4 17-8V16"/><circle cx="18" cy="15" r="2.5"/><circle cx="29" cy="14" r="2.5"/><circle cx="24" cy="19" r="2"/></svg><div><h3>Festivals</h3><p>Vincy Mas, Nine Mornings, regattas.</p></div></a>
       <a class="tile t-leaf" href="map.html"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 44s14-13 14-24a14 14 0 0 0-28 0c0 11 14 24 14 24z"/><circle cx="24" cy="20" r="5"/></svg><div><h3>Near me</h3><p>GPS map and directions.</p></div></a>
@@ -117,10 +128,11 @@
     <span class="brand-foot">Vincy Vibes</span>
     <div class="stripe" aria-hidden="true"><span class="s-blue"></span><span class="s-gold"></span><span class="s-green"></span></div>
     <p><strong>Vincy Vibes is an unofficial, fan-made guide</strong> and is not affiliated with the St. Vincent and the Grenadines Tourism Authority. Information comes from <a href="https://discoversvg.com/">discoversvg.com</a> and Wikipedia, checked October 2026. Schedules, phone numbers and opening times change, so confirm before you travel.</p>
-    <p>Map data &copy; OpenStreetMap contributors. Designed and built by Jody-Ann Trimmingham.</p>
+    <p>Photos from <a href="https://unsplash.com/">Unsplash</a>, credited on each page. Map data &copy; OpenStreetMap contributors. Designed and built by Jody-Ann Trimmingham.</p>
   </div>
 </footer>
 <script src="js/data/islands.js"></script>
+<script src="js/data/photos.js"></script>
 <script src="js/site.js"></script>
 <script src="js/data/ferries.js"></script>
 <script src="js/home.js"></script>

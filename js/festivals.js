@@ -14,7 +14,7 @@
   // Events with known dates (month is 1-12). Vincy Mas uses the published 2027 date.
   var FIXED = [
     { name: "National Heroes Day", m: 3, d: 14 },
-    { name: "Vincy Mas: Carnival Monday", m: 7, d: 5, year: 2027 },
+    { name: "Vincy Mas 2027 begins", m: 6, d: 25, year: 2027 },
     { name: "Independence Day", m: 10, d: 27 },
     { name: "Nine Mornings begins", m: 12, d: 16 }
   ];

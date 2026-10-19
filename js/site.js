@@ -176,3 +176,86 @@
     }
   };
 })();
+
+// Island-themed bullet icons (St. Vincent's volcano, Bequia's sailboat, Tobago Cays turtle...).
+(function () {
+  "use strict";
+  var N = "#0B3D5C";
+  var sea = '<path d="M3 35c4-2 6-2 9 0s6 2 9 0 6-2 9 0 5 2 7 0" fill="none" stroke="#00A6C0" stroke-width="2.2" stroke-linecap="round"/>';
+  function wrap(inner, label) {
+    return '<svg class="isl-icon" viewBox="0 0 40 40" role="img" aria-label="' + label + '">' + inner + "</svg>";
+  }
+  var ICONS = {
+    "st-vincent": function (c) { return wrap(
+      '<circle cx="17" cy="6" r="3" fill="#C9D6DE"/><circle cx="22" cy="4.5" r="2.6" fill="#C9D6DE"/>' +
+      '<path d="M4 31 L15 11 L18 13 L21 11 L33 31 Z" fill="' + c + '" stroke="' + N + '" stroke-width="2.2" stroke-linejoin="round"/>' +
+      '<path d="M15 11 L18 15 L21 11" fill="none" stroke="#FF7A59" stroke-width="2" stroke-linejoin="round"/>' + sea, "Volcano"); },
+    "young-island": function (c) { return wrap(
+      '<path d="M8 31 C9 24 31 24 32 31 Z" fill="' + c + '" stroke="' + N + '" stroke-width="2.2" stroke-linejoin="round"/>' +
+      '<path d="M20 26 C20 20 21 15 23 11" fill="none" stroke="' + N + '" stroke-width="2.2" stroke-linecap="round"/>' +
+      '<path d="M23 11 C19 8 14 9 12 12 C16 11 19 11 23 11 Z M23 11 C25 7 30 6 33 8 C29 9 26 10 23 11 Z M23 11 C26 11 29 14 29 17 C27 14 25 12 23 11 Z" fill="#00A86B" stroke="' + N + '" stroke-width="1.6" stroke-linejoin="round"/>' + sea, "Small island with a palm"); },
+    "bequia": function (c) { return wrap(
+      '<path d="M19 4 V26 H7 Z" fill="#FFFFFF" stroke="' + N + '" stroke-width="2.2" stroke-linejoin="round"/>' +
+      '<path d="M22 8 V26 H32 Z" fill="' + c + '" stroke="' + N + '" stroke-width="2.2" stroke-linejoin="round"/>' +
+      '<path d="M5 28 H35 L31 33 H9 Z" fill="' + N + '"/>' + sea, "Sailboat"); },
+    "mustique": function (c) { return wrap(
+      '<circle cx="28" cy="10" r="6" fill="' + c + '" stroke="' + N + '" stroke-width="2"/>' +
+      '<path d="M14 31 C14 24 15 18 17 13" fill="none" stroke="' + N + '" stroke-width="2.2" stroke-linecap="round"/>' +
+      '<path d="M17 13 C13 9 7 10 5 13 C9 12 13 12 17 13 Z M17 13 C19 8 24 7 27 9 C23 10 20 11 17 13 Z M17 13 C20 13 23 16 23 20 C21 16 19 14 17 13 Z" fill="#00A86B" stroke="' + N + '" stroke-width="1.6" stroke-linejoin="round"/>' + sea, "Palm and sun"); },
+    "canouan": function (c) { return wrap(
+      '<path d="M7 19 C12 11 24 11 29 19 C24 27 12 27 7 19 Z" fill="' + c + '" stroke="' + N + '" stroke-width="2.2" stroke-linejoin="round"/>' +
+      '<path d="M29 19 L36 13 V25 Z" fill="' + c + '" stroke="' + N + '" stroke-width="2.2" stroke-linejoin="round"/>' +
+      '<circle cx="13" cy="18" r="1.8" fill="' + N + '"/><path d="M18 14 C20 17 20 21 18 24" fill="none" stroke="' + N + '" stroke-width="1.6"/>' + sea, "Reef fish"); },
+    "mayreau": function (c) { return wrap(
+      '<path d="M20 30 L7 14 C10 7 30 7 33 14 Z" fill="' + c + '" stroke="' + N + '" stroke-width="2.2" stroke-linejoin="round"/>' +
+      '<path d="M20 30 L13 11 M20 30 L20 9 M20 30 L27 11" stroke="' + N + '" stroke-width="1.6"/>' +
+      '<path d="M16 30 H24 V33 H16 Z" fill="' + c + '" stroke="' + N + '" stroke-width="1.8"/>' + sea, "Seashell"); },
+    "tobago-cays": function (c) { return wrap(
+      '<ellipse cx="20" cy="20" rx="9" ry="11" fill="' + c + '" stroke="' + N + '" stroke-width="2.2"/>' +
+      '<circle cx="20" cy="6.5" r="3.2" fill="' + c + '" stroke="' + N + '" stroke-width="2"/>' +
+      '<path d="M11 14 L5 10 M29 14 L35 10 M12 27 L7 31 M28 27 L33 31" stroke="' + N + '" stroke-width="3" stroke-linecap="round"/>' +
+      '<path d="M20 11 V29 M14 17 H26 M14 23 H26" stroke="' + N + '" stroke-width="1.4"/>', "Turtle"); },
+    "union-island": function (c) { return wrap(
+      '<path d="M3 31 L12 15 L17 21 L24 8 L37 31 Z" fill="' + c + '" stroke="' + N + '" stroke-width="2.2" stroke-linejoin="round"/>' +
+      '<path d="M21 13 L24 8 L27 13 L24 12 Z" fill="#FFFFFF"/>' + sea, "Mountain peaks"); },
+    "palm-island": function (c) { return wrap(
+      '<path d="M6 31 C8 25 32 25 34 31 Z" fill="#F7E3A1" stroke="' + N + '" stroke-width="2.2" stroke-linejoin="round"/>' +
+      '<path d="M18 27 C18 20 19 15 21 10" fill="none" stroke="' + N + '" stroke-width="2.2" stroke-linecap="round"/>' +
+      '<path d="M21 10 C17 6 11 7 9 10 C13 9 17 9 21 10 Z M21 10 C23 5 29 4 32 6 C28 7 24 8 21 10 Z M21 10 C25 10 28 13 28 17 C26 13 24 11 21 10 Z M21 10 C18 11 15 14 14 18 C16 14 18 12 21 10 Z" fill="' + c + '" stroke="' + N + '" stroke-width="1.6" stroke-linejoin="round"/>' + sea, "Palm tree on a beach"); },
+    "petit-st-vincent": function (c) { return wrap(
+      '<path d="M7 31 C9 25 31 25 33 31 Z" fill="#F7E3A1" stroke="' + N + '" stroke-width="2.2" stroke-linejoin="round"/>' +
+      '<path d="M19 27 V6" stroke="' + N + '" stroke-width="2.2" stroke-linecap="round"/>' +
+      '<path d="M19 7 H31 L28 11 L31 15 H19 Z" fill="' + c + '" stroke="' + N + '" stroke-width="2" stroke-linejoin="round"/>' + sea, "Flag on a small island"); }
+  };
+  window.VV.islandIcon = function (isl) {
+    var f = ICONS[isl.id];
+    return f ? f(isl.color) : "";
+  };
+})();
+
+// Independence (27 October 1979) and Vincy Mas countdowns, in St. Vincent time.
+(function () {
+  "use strict";
+  function svgTodayUTC() {
+    var d = new Date(Date.now() - 4 * 3600 * 1000);
+    return { t: Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()), y: d.getUTCFullYear(), m: d.getUTCMonth() + 1 };
+  }
+  function ordinal(n) {
+    var s = ["th", "st", "nd", "rd"], v = n % 100;
+    return n + (s[(v - 20) % 10] || s[v] || s[0]);
+  }
+  window.VV.independence = function () {
+    var now = svgTodayUTC();
+    var year = now.y;
+    var t = Date.UTC(year, 9, 27);
+    if (t < now.t) { year += 1; t = Date.UTC(year, 9, 27); }
+    var days = Math.round((t - now.t) / 86400000);
+    return { days: days, today: days === 0, year: year, ordinal: ordinal(year - 1979), inOctober: now.m === 10 };
+  };
+  /** Vincy Mas 2027 runs 25 June to 6 July 2027 ("Road to 50"). */
+  window.VV.vincyMas = function () {
+    var now = svgTodayUTC();
+    var start = Date.UTC(2027, 5, 25), end = Date.UTC(2027, 6, 6);
+    return { days: Math.round((start - now.t) / 86400000), on: now.t >= start && now.t <= end, over: now.t > end };
+  };
+})();
