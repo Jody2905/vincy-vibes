@@ -284,4 +284,8 @@
 
   setActive("st-vincent");
   window.VV.sailTo = sailTo; // handy for testing
+
+  // Arriving from the quiz (index.html?sail=bequia#hop): sail straight to that island
+  var want = new URLSearchParams(location.search).get("sail");
+  if (want && VV.island(want)) { setTimeout(function () { sailTo(want); }, 500); }
 })();
