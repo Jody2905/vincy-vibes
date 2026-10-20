@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com/leaflet@1.9.4/dist/leaflet.js; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com/leaflet@1.9.4/dist/leaflet.css; font-src https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org https://unpkg.com/leaflet@1.9.4/dist/images/; connect-src 'self' https://api.open-meteo.com https://marine-api.open-meteo.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Offline · Vincy Vibes</title>
+  <meta name="description" content="You're offline. Saved pages still work.">
+  <meta name="theme-color" content="#1A0B3B">
+  <link rel="icon" href="img/favicon.svg?v=20261022" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest?v=20261022">
+  <link rel="apple-touch-icon" href="img/icon-192.png?v=20261022">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css?v=20261022">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="index.html"><svg viewBox="0 0 30 30" width="34" height="34" aria-hidden="true"><path fill="#0072C6" d="M8 3l4.5 7L8 17l-4.5-7z"/><path fill="#FCD116" stroke="#C9A400" stroke-width=".6" d="M22 3l4.5 7L22 17l-4.5-7z"/><path fill="#009E60" d="M15 13l4.5 7L15 27l-4.5-7z"/></svg>Vincy Vibes</a>
+    <button type="button" class="menu-btn" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav class="nav" id="main-nav" aria-label="Main"><a href="islands.html">Islands</a><a href="map.html">Map</a><a href="stay.html">Stay</a><a href="things-to-do.html">Things to do</a><a href="planner.html">Plan a day</a><a href="quiz.html">Quiz</a><a href="culture.html">Culture</a><a href="festivals.html">Festivals</a><a href="ferries.html">Ferries</a><a href="taxis.html">Taxis</a><a href="getting-here.html">Getting here</a></nav>
+  </div>
+</header>
+<main>
+<div class="page-band sky-night">
+  <svg class="scene" viewBox="0 0 1440 480" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+<defs>
+<linearGradient id="skyp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0D0626"/><stop offset=".45" stop-color="#2A0C55"/><stop offset=".78" stop-color="#6B1A78"/><stop offset="1" stop-color="#C23A7E"/></linearGradient>
+<linearGradient id="seap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7A2A7E"/><stop offset="1" stop-color="#0D0A2E"/></linearGradient>
+<radialGradient id="glowp"><stop offset="0" stop-color="#FCE6A0" stop-opacity=".7"/><stop offset="1" stop-color="#FCE6A0" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1440" height="480" fill="url(#skyp)"/>
+<circle cx="1060" cy="350" r="230" fill="url(#glowp)"/>
+<circle cx="1060" cy="356" r="60" fill="#FCE6A0"/>
+<path d="M120 366 c40-18 80-22 120-8 c24-12 60-12 84 4 c30-10 58-8 80 4 Z" fill="#3E1A5E" opacity=".75"/>
+<path d="M1230 366 c18-12 42-16 64-6 c14-8 34-8 50 6 Z" fill="#3E1A5E" opacity=".75"/>
+<path d="M560 366 C 660 346 760 262 838 190 L 862 202 L 886 188 C 960 250 1060 334 1200 366 Z" fill="#1A0838"/><path d="M838 190 L 862 202 L 886 188 L 874 206 L 852 208 Z" fill="#6B1A78" opacity=".35"/>
+<rect y="364" width="1440" height="116" fill="url(#seap)"/>
+<g stroke="#FCE6A0" stroke-width="3" stroke-linecap="round" opacity=".55"><path d="M1000 382h120M1020 398h80M986 414h148M1030 432h60M1008 452h104"/></g>
+<g stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity=".18"><path d="M200 400h60M420 430h90M640 410h50M300 460h70M1240 420h60M760 456h80"/></g>
+<g transform="translate(70 486) scale(1.0 1.0)" fill="#0A0318" stroke="#0A0318"><path d="M0 0 C 2 -60 -6 -120 -26 -178" fill="none" stroke-width="13" stroke-linecap="round"/><path d="M-26 -178 C -66 -198 -110 -190 -140 -158 C -100 -176 -62 -180 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -56 -220 -92 -236 -126 -230 C -86 -216 -54 -198 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -14 -226 26 -248 70 -242 C 30 -228 -2 -206 -26 -178 Z" stroke="none"/><path d="M-26 -178 C 20 -194 62 -180 90 -148 C 52 -168 12 -174 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -30 -220 -22 -252 0 -276 C -10 -240 -16 -208 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -60 -168 -84 -140 -92 -108 C -72 -138 -50 -160 -26 -178 Z" stroke="none"/></g><g transform="translate(1395 486) scale(-0.85 0.85)" fill="#0A0318" stroke="#0A0318"><path d="M0 0 C 2 -60 -6 -120 -26 -178" fill="none" stroke-width="13" stroke-linecap="round"/><path d="M-26 -178 C -66 -198 -110 -190 -140 -158 C -100 -176 -62 -180 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -56 -220 -92 -236 -126 -230 C -86 -216 -54 -198 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -14 -226 26 -248 70 -242 C 30 -228 -2 -206 -26 -178 Z" stroke="none"/><path d="M-26 -178 C 20 -194 62 -180 90 -148 C 52 -168 12 -174 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -30 -220 -22 -252 0 -276 C -10 -240 -16 -208 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -60 -168 -84 -140 -92 -108 C -72 -138 -50 -160 -26 -178 Z" stroke="none"/></g>
+</svg>
+  <div class="wrap page-head">
+    <h1 id="page-title">You're offline</h1>
+    <p class="lede" id="page-lede">No signal right now, which happens on the ferry and in the Tobago Cays. The pages you've visited and the core tools are saved on this device.</p>
+  </div>
+</div>
+<div class="wrap content">
+  <section style="margin-top:40px">
+    <h2>Still works without a signal</h2>
+    <ul class="tool-list offline-list">
+      <li><a class="tool-link" href="taxis.html"><div><strong>Approved taxis</strong><span>All 326 drivers, tap to call.</span></div></a></li>
+      <li><a class="tool-link" href="ferries.html"><div><strong>Ferry times</strong><span>Timetables and the next boat.</span></div></a></li>
+      <li><a class="tool-link" href="things-to-do.html"><div><strong>Your bucket list</strong><span>Ticks are saved on this device.</span></div></a></li>
+      <li><a class="tool-link" href="planner.html"><div><strong>Plan a day</strong><span>Map tiles and weather need a signal.</span></div></a></li>
+      <li><a class="tool-link" href="index.html"><div><strong>Home</strong><span>Island hop and the Vincy Mas countdown.</span></div></a></li>
+    </ul>
+    <p class="footnote">In an emergency, call 911 or 999.</p>
+  </section>
+</div>
+
+</main>
+<div class="net-toast" id="net-toast" role="status" hidden></div>
+<div class="confetti-edge" aria-hidden="true"></div>
+<footer class="footer">
+  <div class="wrap">
+    <span class="brand-foot">Vincy Vibes</span>
+    <div class="stripe" aria-hidden="true"><span class="s-blue"></span><span class="s-gold"></span><span class="s-green"></span></div>
+    <p><strong>Vincy Vibes is an unofficial, fan-made guide</strong> and is not affiliated with the St. Vincent and the Grenadines Tourism Authority. Information comes from <a href="https://discoversvg.com/">discoversvg.com</a>, government sources, local news and Wikipedia, checked October 2026. Schedules, phone numbers and event dates change, so confirm before you travel.</p>
+    <p>All illustrations are original. Map data &copy; OpenStreetMap contributors. Designed and built by Jody-Ann Trimmingham.</p>
+    <p class="app-line"><button type="button" class="install-btn" id="install-btn" hidden>Install Vincy Vibes on this device</button> <span id="offline-ready"></span></p>
+  </div>
+</footer>
+<script src="js/data/islands.js?v=20261022"></script>
+<script src="js/site.js?v=20261022"></script>
+</body>
+</html>

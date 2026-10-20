@@ -2,17 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com/leaflet@1.9.4/dist/leaflet.js; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com/leaflet@1.9.4/dist/leaflet.css; font-src https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org https://unpkg.com/leaflet@1.9.4/dist/images/; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com/leaflet@1.9.4/dist/leaflet.js; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com/leaflet@1.9.4/dist/leaflet.css; font-src https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org https://unpkg.com/leaflet@1.9.4/dist/images/; connect-src 'self' https://api.open-meteo.com https://marine-api.open-meteo.com; object-src 'none'; base-uri 'self'; form-action 'self'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Getting here · Vincy Vibes</title>
   <meta name="description" content="Flights, airports and entry requirements for St. Vincent and the Grenadines.">
   <meta name="theme-color" content="#1A0B3B">
-  <link rel="icon" href="img/favicon.svg?v=20261021" type="image/svg+xml">
+  <link rel="icon" href="img/favicon.svg?v=20261022" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest?v=20261022">
+  <link rel="apple-touch-icon" href="img/icon-192.png?v=20261022">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="css/style.css?v=20261021">
+  <link rel="stylesheet" href="css/style.css?v=20261022">
 </head>
 <body>
 <header class="topbar">
@@ -98,9 +100,38 @@
       </ul>
     </div>
   </section>
+  <section class="money" id="money" aria-labelledby="money-title">
+    <div class="money-intro">
+      <span class="kicker">Money</span>
+      <h2 id="money-title">EC$ converter</h2>
+      <p>St. Vincent and the Grenadines uses the <strong>Eastern Caribbean dollar (EC$)</strong>, shared by eight OECS countries and territories. It has been fixed at <strong>EC$2.70 to US$1</strong> since July 1976, so this converter doesn't need live rates.</p>
+      <ul class="plain-list">
+        <li>US dollars are widely accepted, but change usually comes back in EC$, and shops may use a rate a little below 2.70.</li>
+        <li>Prices are normally in EC$. If a price isn't marked, ask which dollar it is.</li>
+        <li>Keep some EC$ cash for minibuses, roadside food and market stalls.</li>
+      </ul>
+      <p class="footnote">Peg confirmed by the <a href="https://www.eccb-centralbank.org/news/eccb-celebrates-49-years-of-strength-and-stability-of-ec-dollar-peg">Eastern Caribbean Central Bank</a>. Banks and exchange bureaus add a small margin.</p>
+    </div>
+    <form class="converter" id="converter" aria-label="Currency converter">
+      <div class="cv-field">
+        <label for="cv-ec">EC dollars</label>
+        <div class="cv-input"><span aria-hidden="true">EC$</span><input id="cv-ec" type="text" inputmode="decimal" autocomplete="off" value="100"></div>
+      </div>
+      <span class="cv-swap" aria-hidden="true">⇅</span>
+      <div class="cv-field">
+        <label for="cv-us">US dollars</label>
+        <div class="cv-input"><span aria-hidden="true">US$</span><input id="cv-us" type="text" inputmode="decimal" autocomplete="off" value="37.04"></div>
+      </div>
+      <p class="cv-rate">Type in either box. EC$1 = US$0.37 · US$1 = EC$2.70</p>
+      <div class="cv-quick" role="group" aria-label="Quick amounts in EC$">
+        <button type="button" data-ec="10">EC$10</button><button type="button" data-ec="50">EC$50</button><button type="button" data-ec="100">EC$100</button><button type="button" data-ec="500">EC$500</button>
+      </div>
+    </form>
+  </section>
 </div>
 
 </main>
+<div class="net-toast" id="net-toast" role="status" hidden></div>
 <div class="confetti-edge" aria-hidden="true"></div>
 <footer class="footer">
   <div class="wrap">
@@ -108,11 +139,13 @@
     <div class="stripe" aria-hidden="true"><span class="s-blue"></span><span class="s-gold"></span><span class="s-green"></span></div>
     <p><strong>Vincy Vibes is an unofficial, fan-made guide</strong> and is not affiliated with the St. Vincent and the Grenadines Tourism Authority. Information comes from <a href="https://discoversvg.com/">discoversvg.com</a>, government sources, local news and Wikipedia, checked October 2026. Schedules, phone numbers and event dates change, so confirm before you travel.</p>
     <p>All illustrations are original. Map data &copy; OpenStreetMap contributors. Designed and built by Jody-Ann Trimmingham.</p>
+    <p class="app-line"><button type="button" class="install-btn" id="install-btn" hidden>Install Vincy Vibes on this device</button> <span id="offline-ready"></span></p>
   </div>
 </footer>
-<script src="js/data/islands.js?v=20261021"></script>
-<script src="js/site.js?v=20261021"></script>
-<script src="js/data/travel.js?v=20261021"></script>
-<script src="js/getting-here.js?v=20261021"></script>
+<script src="js/data/islands.js?v=20261022"></script>
+<script src="js/site.js?v=20261022"></script>
+<script src="js/data/travel.js?v=20261022"></script>
+<script src="js/getting-here.js?v=20261022"></script>
+<script src="js/converter.js?v=20261022"></script>
 </body>
 </html>

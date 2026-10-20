@@ -2,17 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com/leaflet@1.9.4/dist/leaflet.js; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com/leaflet@1.9.4/dist/leaflet.css; font-src https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org https://unpkg.com/leaflet@1.9.4/dist/images/; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com/leaflet@1.9.4/dist/leaflet.js; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com/leaflet@1.9.4/dist/leaflet.css; font-src https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org https://unpkg.com/leaflet@1.9.4/dist/images/; connect-src 'self' https://api.open-meteo.com https://marine-api.open-meteo.com; object-src 'none'; base-uri 'self'; form-action 'self'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Independence and culture · Vincy Vibes</title>
   <meta name="description" content="Independence Day, national symbols, Vincy Mas 2027 Road to 50, and the culture and history of St. Vincent and the Grenadines.">
   <meta name="theme-color" content="#1A0B3B">
-  <link rel="icon" href="img/favicon.svg?v=20261021" type="image/svg+xml">
+  <link rel="icon" href="img/favicon.svg?v=20261022" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest?v=20261022">
+  <link rel="apple-touch-icon" href="img/icon-192.png?v=20261022">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="css/style.css?v=20261021">
+  <link rel="stylesheet" href="css/style.css?v=20261022">
 </head>
 <body>
 <header class="topbar">
@@ -88,6 +90,31 @@
     </ul>
   </section>
 
+  <section aria-labelledby="talk-title" class="talk">
+    <div class="section-intro">
+      <span class="kicker">Vincentian Creole</span>
+      <h2 id="talk-title">Talk like a Vincy</h2>
+      <p>English is the official language, but day to day you'll hear Vincentian Creole, with words from English, West African languages, Portuguese, French Creole and Kalinago roots. Nobody expects visitors to speak it, but locals will love it if you try a few.</p>
+    </div>
+    <ul class="say-grid">
+      <li class="say"><strong lang="svc">Maanin!</strong><span>Good morning.</span><small>Greet people before anything else: a “good morning” or “good afternoon” goes a long way here.</small></li>
+      <li class="say"><strong lang="svc">Wah ah gwarn?</strong><span>What’s going on?</span></li>
+      <li class="say"><strong lang="svc">Seen</strong><span>I understand.</span></li>
+      <li class="say"><strong lang="svc">Look sharp</strong><span>Hurry up.</span></li>
+      <li class="say"><strong lang="svc">Nyam</strong><span>To eat.</span><small>From West African languages (Wolof and Fula).</small></li>
+      <li class="say"><strong lang="svc">Pikney</strong><span>A child.</span><small>From the Portuguese pequenino, “little one”.</small></li>
+      <li class="say"><strong lang="svc">Yahso / deyso</strong><span>Here / there.</span></li>
+      <li class="say"><strong lang="svc">Back ah yard</strong><span>Back home.</span></li>
+      <li class="say"><strong lang="svc">Mudda wuk!</strong><span>Oh my goodness!</span></li>
+      <li class="say"><strong lang="svc">Comess</strong><span>Gossip.</span><small>From Antillean Creole konmès.</small></li>
+      <li class="say"><strong lang="svc">Since Soufriere erupt</strong><span>Since a long, long time ago.</span><small>Also “since 1802” or “since me born”.</small></li>
+      <li class="say"><strong lang="svc">Shout me later nah</strong><span>Talk to me later.</span></li>
+      <li class="say"><strong lang="svc">Bless up</strong><span>A warm goodbye.</span><small>Usually how a conversation ends.</small></li>
+      <li class="say"><strong lang="svc">Walk good</strong><span>Take care.</span></li>
+    </ul>
+    <p class="footnote">Words and meanings from the <a href="https://en.wikipedia.org/wiki/Vincentian_Creole">Vincentian Creole</a> article on Wikipedia. Spellings vary, because the creole is mostly spoken rather than written. You'll also hear <strong>lime</strong> (to hang out with friends), which you'll find all over this site.</p>
+  </section>
+
   <section aria-labelledby="time-title">
     <h2 id="time-title">A short history</h2>
     <ol class="timeline">
@@ -109,6 +136,7 @@
 </div>
 
 </main>
+<div class="net-toast" id="net-toast" role="status" hidden></div>
 <div class="confetti-edge" aria-hidden="true"></div>
 <footer class="footer">
   <div class="wrap">
@@ -116,10 +144,11 @@
     <div class="stripe" aria-hidden="true"><span class="s-blue"></span><span class="s-gold"></span><span class="s-green"></span></div>
     <p><strong>Vincy Vibes is an unofficial, fan-made guide</strong> and is not affiliated with the St. Vincent and the Grenadines Tourism Authority. Information comes from <a href="https://discoversvg.com/">discoversvg.com</a>, government sources, local news and Wikipedia, checked October 2026. Schedules, phone numbers and event dates change, so confirm before you travel.</p>
     <p>All illustrations are original. Map data &copy; OpenStreetMap contributors. Designed and built by Jody-Ann Trimmingham.</p>
+    <p class="app-line"><button type="button" class="install-btn" id="install-btn" hidden>Install Vincy Vibes on this device</button> <span id="offline-ready"></span></p>
   </div>
 </footer>
-<script src="js/data/islands.js?v=20261021"></script>
-<script src="js/site.js?v=20261021"></script>
-<script src="js/culture.js?v=20261021"></script>
+<script src="js/data/islands.js?v=20261022"></script>
+<script src="js/site.js?v=20261022"></script>
+<script src="js/culture.js?v=20261022"></script>
 </body>
 </html>

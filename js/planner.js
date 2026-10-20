@@ -247,6 +247,7 @@
       }).join("") + "</ul>";
     }
 
+    html += '<div id="plan-wx" aria-live="polite"></div>';
     html += '<ol class="daylist">';
     var homeName = s.opts.from === "st-vincent" ? "Kingstown" : "Bequia";
     var awayName = s.target === "bequia" ? "Bequia" : "Kingstown";
@@ -294,6 +295,34 @@
     out.classList.remove("in"); void out.offsetWidth; out.classList.add("in");
     updateUrl();
     drawMap(mapped);
+    planWeather();
+  }
+
+  // Forecast for the plan's day, when it's within the next week
+  function planWeather() {
+    var box = document.getElementById("plan-wx"), s = state;
+    if (!box || !VV.weather) return;
+    var days = Math.round((s.date - svgToday()) / 86400000);
+    if (days < 0 || days > 6) return;
+    var isl = VV.island(s.target);
+    var want = isoDate(s.date);
+    VV.weather(isl.lat, isl.lng).then(function (w) {
+      if (state !== s) return;
+      var d = w.days.filter(function (x) { return x.date === want; })[0];
+      if (!d) return;
+      var tips = [];
+      if (d.rain != null && d.rain >= 60) tips.push("pack a light rain jacket");
+      if (d.uv != null && d.uv >= 8) tips.push("the sun is strong, so bring sun cream and a hat");
+      if (d.waveMax != null && d.waveMax >= 1.25) tips.push("the sea may be choppy for boat trips and snorkelling");
+      if (d.windMax != null && d.windMax >= 17 && s.target === "union-island") tips.push("good wind for kitesurfing");
+      box.innerHTML = '<div class="plan-wx">' + VV.weatherIcon(d.code) +
+        "<div><strong>" + (days === 0 ? "Today" : days === 1 ? "Tomorrow" : VV.dayName(s.day)) + ": " + VV.esc(VV.weatherText(d.code)) +
+        ", " + Math.round(d.max) + "° / " + Math.round(d.min) + "°C</strong>" +
+        "<p>" + [d.rain != null ? d.rain + "% chance of rain" : "", d.windMax != null ? "wind up to " + Math.round(d.windMax) + " knots" : "",
+          d.waveMax != null ? "waves up to " + d.waveMax.toFixed(1) + " m" : "", "sunset " + VV.clock(d.sunset)].filter(Boolean).join(" · ") + "</p>" +
+        (tips.length ? '<p class="plan-wx-tip">Tip: ' + VV.esc(tips.join("; ")) + ".</p>" : "") +
+        '<p class="wx-credit">' + VV.WX_CREDIT + "</p></div></div>";
+    }).catch(function () { /* no forecast: the plan still works */ });
   }
 
   var map = null;

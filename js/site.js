@@ -259,3 +259,44 @@
     return { days: Math.round((start - now.t) / 86400000), on: now.t >= start && now.t <= end, over: now.t > end };
   };
 })();
+
+// Offline support: register the service worker, offer "Install", and say when the signal drops.
+(function () {
+  "use strict";
+  var toast = document.getElementById("net-toast");
+  var hideTimer = null;
+  function say(text, stay) {
+    if (!toast) return;
+    toast.textContent = text;
+    toast.hidden = false;
+    clearTimeout(hideTimer);
+    if (!stay) hideTimer = setTimeout(function () { toast.hidden = true; }, 4000);
+  }
+  window.addEventListener("offline", function () { say("You're offline. Saved pages, taxis, ferry times and your bucket list still work.", true); });
+  window.addEventListener("online", function () { say("Back online."); });
+  if (navigator.onLine === false) say("You're offline. Saved pages, taxis, ferry times and your bucket list still work.", true);
+
+  if ("serviceWorker" in navigator && /^https:$|^http:$/.test(location.protocol)) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("sw.js").then(function () {
+        return navigator.serviceWorker.ready;
+      }).then(function () {
+        var el = document.getElementById("offline-ready");
+        if (el) el.textContent = "Saved for offline use on this device.";
+      }).catch(function () { /* offline support is a bonus; the site works without it */ });
+    });
+  }
+
+  var deferred = null, btn = document.getElementById("install-btn");
+  window.addEventListener("beforeinstallprompt", function (e) {
+    e.preventDefault();
+    deferred = e;
+    if (btn) btn.hidden = false;
+  });
+  if (btn) btn.addEventListener("click", function () {
+    if (!deferred) return;
+    deferred.prompt();
+    deferred.userChoice.then(function () { deferred = null; btn.hidden = true; });
+  });
+  window.addEventListener("appinstalled", function () { if (btn) btn.hidden = true; });
+})();

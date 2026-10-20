@@ -74,7 +74,8 @@ async def main():
 
     async with async_playwright() as p:
         browser = await p.chromium.launch()
-        page = await (await browser.new_context()).new_page()
+        # Service workers are blocked so every request reaches the page directly and can be checked.
+        page = await (await browser.new_context(service_workers="block")).new_page()
         await page.route("**/*", route)
         msgs, dialogs = [], []
         page.on("console", lambda m: msgs.append(m.text))

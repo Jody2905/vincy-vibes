@@ -2,18 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com/leaflet@1.9.4/dist/leaflet.js; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com/leaflet@1.9.4/dist/leaflet.css; font-src https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org https://unpkg.com/leaflet@1.9.4/dist/images/; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com/leaflet@1.9.4/dist/leaflet.js; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com/leaflet@1.9.4/dist/leaflet.css; font-src https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org https://unpkg.com/leaflet@1.9.4/dist/images/; connect-src 'self' https://api.open-meteo.com https://marine-api.open-meteo.com; object-src 'none'; base-uri 'self'; form-action 'self'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Map with GPS · Vincy Vibes</title>
   <meta name="description" content="Map of St. Vincent and the Grenadines with GPS coordinates, directions and a near-me finder.">
   <meta name="theme-color" content="#1A0B3B">
-  <link rel="icon" href="img/favicon.svg?v=20261021" type="image/svg+xml">
+  <link rel="icon" href="img/favicon.svg?v=20261022" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest?v=20261022">
+  <link rel="apple-touch-icon" href="img/icon-192.png?v=20261022">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-  <link rel="stylesheet" href="css/style.css?v=20261021">
+  <link rel="stylesheet" href="css/style.css?v=20261022">
 </head>
 <body>
 <header class="topbar">
@@ -61,6 +63,7 @@
 </div>
 
 </main>
+<div class="net-toast" id="net-toast" role="status" hidden></div>
 <div class="confetti-edge" aria-hidden="true"></div>
 <footer class="footer">
   <div class="wrap">
@@ -68,12 +71,13 @@
     <div class="stripe" aria-hidden="true"><span class="s-blue"></span><span class="s-gold"></span><span class="s-green"></span></div>
     <p><strong>Vincy Vibes is an unofficial, fan-made guide</strong> and is not affiliated with the St. Vincent and the Grenadines Tourism Authority. Information comes from <a href="https://discoversvg.com/">discoversvg.com</a>, government sources, local news and Wikipedia, checked October 2026. Schedules, phone numbers and event dates change, so confirm before you travel.</p>
     <p>All illustrations are original. Map data &copy; OpenStreetMap contributors. Designed and built by Jody-Ann Trimmingham.</p>
+    <p class="app-line"><button type="button" class="install-btn" id="install-btn" hidden>Install Vincy Vibes on this device</button> <span id="offline-ready"></span></p>
   </div>
 </footer>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-<script src="js/data/islands.js?v=20261021"></script>
-<script src="js/site.js?v=20261021"></script>
-<script src="js/data/places.js?v=20261021"></script>
-<script src="js/map.js?v=20261021"></script>
+<script src="js/data/islands.js?v=20261022"></script>
+<script src="js/site.js?v=20261022"></script>
+<script src="js/data/places.js?v=20261022"></script>
+<script src="js/map.js?v=20261022"></script>
 </body>
 </html>

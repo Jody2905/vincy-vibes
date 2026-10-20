@@ -12,7 +12,9 @@ Helpful details: the page and URL, the browser, steps to reproduce, and what an 
 
 | Control | Why |
 |---|---|
-| **Content Security Policy** on every page | Scripts only run from this site and one pinned Leaflet file. Inline scripts and `on…=` handlers are blocked, so injected HTML can't run code. No plugins (`object-src 'none'`), and `<base>` and form targets are locked to this site. |
+| **Content Security Policy** on every page | Scripts only run from this site and one pinned Leaflet file. Inline scripts and `on…=` handlers are blocked, so injected HTML can't run code. Data requests (`connect-src`) can only go to this site and Open-Meteo's weather APIs. No plugins (`object-src 'none'`), and `<base>` and form targets are locked to this site. |
+| **Service worker scope** | The offline service worker only caches this site's own files, the pinned Leaflet files (still checked against their integrity hashes) and Google Fonts. It never caches weather or map tiles, and it handles only GET requests. |
+| **Weather requests** | Sent with `credentials: "omit"` and no referrer, and they carry only an island's coordinates, never the visitor's location. |
 | **Subresource Integrity** on Leaflet | The map library comes from the unpkg CDN with a SHA-256 hash. If the CDN copy is ever changed, the browser refuses to run it. |
 | **Escaping and allow-lists** | All data is HTML-escaped before it reaches the page. Every URL parameter the site reads (`?id=`, `?island=`, `?result=`, the planner's options) is checked against a list of known values or a strict format before use. |
 | **Referrer policy** | `strict-origin-when-cross-origin`, so outside sites (maps, fonts) never see full page URLs. |

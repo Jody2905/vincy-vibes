@@ -25,6 +25,7 @@
   document.getElementById("page-lede").textContent = isl.tagline;
   document.getElementById("isl-intro").textContent = isl.intro;
   document.getElementById("isl-there").textContent = isl.gettingThere;
+  if (VV.weatherWidget) VV.weatherWidget(document.getElementById("isl-weather"), isl);
   document.getElementById("isl-around").textContent = isl.gettingAround;
 
   var say = { "bequia": "Say it: BECK-way" }[isl.id];
