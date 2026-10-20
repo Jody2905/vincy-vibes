@@ -138,8 +138,7 @@ window.VV_ISLANDS = [
     highlights: [
       ["Saltwhistle Bay", "A popular yacht anchorage with calm water that's perfect for swimming."],
       ["The walk across", "About an hour on the road between Saline Bay and Saltwhistle Bay, past Old Wall and its stone Catholic church."],
-      ["Mayreau Gardens", "A coral reef dive and snorkel site off the east coast, inside the Tobago Cays Marine Park."],
-      ["Mayreau Regatta", "An annual sailing festival."]
+      ["Mayreau Gardens", "A coral reef dive and snorkel site off the east coast, inside the Tobago Cays Marine Park."]
     ],
     gettingThere: "Ferries stop at the jetty in Saline Bay. Water taxis run to the Tobago Cays and Union Island.",
     gettingAround: "On foot. Hiking trails lead into dry forest where you may see tortoises and iguanas.",

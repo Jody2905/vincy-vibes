@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com/leaflet@1.9.4/dist/leaflet.js; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com/leaflet@1.9.4/dist/leaflet.css; font-src https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org https://unpkg.com/leaflet@1.9.4/dist/images/; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plan a day · Vincy Vibes</title>
+  <meta name="description" content="Build a day plan for any island in St. Vincent and the Grenadines, with ferry times, a map of your stops and a shareable link.">
+  <meta name="theme-color" content="#1A0B3B">
+  <link rel="icon" href="img/favicon.svg?v=20261021" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="css/style.css?v=20261021">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="index.html"><svg viewBox="0 0 30 30" width="34" height="34" aria-hidden="true"><path fill="#0072C6" d="M8 3l4.5 7L8 17l-4.5-7z"/><path fill="#FCD116" stroke="#C9A400" stroke-width=".6" d="M22 3l4.5 7L22 17l-4.5-7z"/><path fill="#009E60" d="M15 13l4.5 7L15 27l-4.5-7z"/></svg>Vincy Vibes</a>
+    <button type="button" class="menu-btn" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav class="nav" id="main-nav" aria-label="Main"><a href="islands.html">Islands</a><a href="map.html">Map</a><a href="stay.html">Stay</a><a href="things-to-do.html">Things to do</a><a href="planner.html" aria-current="page">Plan a day</a><a href="quiz.html">Quiz</a><a href="culture.html">Culture</a><a href="festivals.html">Festivals</a><a href="ferries.html">Ferries</a><a href="taxis.html">Taxis</a><a href="getting-here.html">Getting here</a></nav>
+  </div>
+</header>
+<main>
+<div class="page-band sky-day">
+  <svg class="scene" viewBox="0 0 1440 480" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+<defs>
+<linearGradient id="skyp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0E6FA8"/><stop offset=".45" stop-color="#2FA9D8"/><stop offset=".78" stop-color="#86D8EE"/><stop offset="1" stop-color="#D8F4F7"/></linearGradient>
+<linearGradient id="seap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22B8C8"/><stop offset="1" stop-color="#0B4F6C"/></linearGradient>
+<radialGradient id="glowp"><stop offset="0" stop-color="#FFF1A8" stop-opacity=".7"/><stop offset="1" stop-color="#FFF1A8" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1440" height="480" fill="url(#skyp)"/>
+<circle cx="1060" cy="350" r="230" fill="url(#glowp)"/>
+<circle cx="1060" cy="356" r="60" fill="#FFF1A8"/>
+<path d="M120 366 c40-18 80-22 120-8 c24-12 60-12 84 4 c30-10 58-8 80 4 Z" fill="#3E8F86" opacity=".75"/>
+<path d="M1230 366 c18-12 42-16 64-6 c14-8 34-8 50 6 Z" fill="#3E8F86" opacity=".75"/>
+<path d="M560 366 C 660 346 760 262 838 190 L 862 202 L 886 188 C 960 250 1060 334 1200 366 Z" fill="#0B5A43"/><path d="M838 190 L 862 202 L 886 188 L 874 206 L 852 208 Z" fill="#86D8EE" opacity=".35"/>
+<rect y="364" width="1440" height="116" fill="url(#seap)"/>
+<g stroke="#FFF1A8" stroke-width="3" stroke-linecap="round" opacity=".55"><path d="M1000 382h120M1020 398h80M986 414h148M1030 432h60M1008 452h104"/></g>
+<g stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity=".18"><path d="M200 400h60M420 430h90M640 410h50M300 460h70M1240 420h60M760 456h80"/></g>
+<g transform="translate(70 486) scale(1.0 1.0)" fill="#073A2C" stroke="#073A2C"><path d="M0 0 C 2 -60 -6 -120 -26 -178" fill="none" stroke-width="13" stroke-linecap="round"/><path d="M-26 -178 C -66 -198 -110 -190 -140 -158 C -100 -176 -62 -180 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -56 -220 -92 -236 -126 -230 C -86 -216 -54 -198 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -14 -226 26 -248 70 -242 C 30 -228 -2 -206 -26 -178 Z" stroke="none"/><path d="M-26 -178 C 20 -194 62 -180 90 -148 C 52 -168 12 -174 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -30 -220 -22 -252 0 -276 C -10 -240 -16 -208 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -60 -168 -84 -140 -92 -108 C -72 -138 -50 -160 -26 -178 Z" stroke="none"/></g><g transform="translate(1395 486) scale(-0.85 0.85)" fill="#073A2C" stroke="#073A2C"><path d="M0 0 C 2 -60 -6 -120 -26 -178" fill="none" stroke-width="13" stroke-linecap="round"/><path d="M-26 -178 C -66 -198 -110 -190 -140 -158 C -100 -176 -62 -180 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -56 -220 -92 -236 -126 -230 C -86 -216 -54 -198 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -14 -226 26 -248 70 -242 C 30 -228 -2 -206 -26 -178 Z" stroke="none"/><path d="M-26 -178 C 20 -194 62 -180 90 -148 C 52 -168 12 -174 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -30 -220 -22 -252 0 -276 C -10 -240 -16 -208 -26 -178 Z" stroke="none"/><path d="M-26 -178 C -60 -168 -84 -140 -92 -108 C -72 -138 -50 -160 -26 -178 Z" stroke="none"/></g>
+</svg>
+  <div class="wrap page-head">
+    <h1 id="page-title">Plan a day</h1>
+    <p class="lede" id="page-lede">Pick an island, a date and what you love. We'll line up a morning-to-sunset plan, with real ferry times for day trips between St. Vincent and Bequia, and every stop on the map.</p>
+  </div>
+</div>
+<div class="wrap content">
+  <div class="planner">
+    <form class="plan-form" id="plan-form" aria-label="Plan your day">
+      <div class="pf-row">
+        <label for="pl-island">Island</label>
+        <select class="filter" id="pl-island"></select>
+      </div>
+      <div class="pf-row">
+        <span class="pf-label" id="pl-from-l">Starting from</span>
+        <div class="seg" id="pl-from" role="group" aria-labelledby="pl-from-l">
+          <button type="button" data-v="here" aria-pressed="true">Staying there</button>
+          <button type="button" data-v="st-vincent" aria-pressed="false">St. Vincent</button>
+          <button type="button" data-v="bequia" aria-pressed="false">Bequia</button>
+        </div>
+      </div>
+      <div class="pf-row">
+        <label for="pl-date">Date</label>
+        <input class="filter" type="date" id="pl-date" required>
+      </div>
+      <div class="pf-row">
+        <span class="pf-label" id="pl-likes-l">What do you love?</span>
+        <div class="chips" id="pl-likes" role="group" aria-labelledby="pl-likes-l"></div>
+      </div>
+      <div class="pf-row">
+        <span class="pf-label" id="pl-pace-l">Pace</span>
+        <div class="seg" id="pl-pace" role="group" aria-labelledby="pl-pace-l">
+          <button type="button" data-v="relaxed" aria-pressed="true">Relaxed</button>
+          <button type="button" data-v="full" aria-pressed="false">Full day, early start</button>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-gold pf-go">Plan my day</button>
+    </form>
+    <div class="plan-col">
+      <div class="plan-empty" id="plan-empty">
+        <div class="pe-art" aria-hidden="true"><span></span><span></span><span></span></div>
+        <h2>Your day will appear here</h2>
+        <p>Choose an island and tap <strong>Plan my day</strong>. You can swap any stop, shuffle the whole day, print it or share the link.</p>
+      </div>
+      <section class="plan-out" id="plan-out" aria-live="polite" hidden></section>
+    </div>
+  </div>
+</div>
+
+</main>
+<div class="confetti-edge" aria-hidden="true"></div>
+<footer class="footer">
+  <div class="wrap">
+    <span class="brand-foot">Vincy Vibes</span>
+    <div class="stripe" aria-hidden="true"><span class="s-blue"></span><span class="s-gold"></span><span class="s-green"></span></div>
+    <p><strong>Vincy Vibes is an unofficial, fan-made guide</strong> and is not affiliated with the St. Vincent and the Grenadines Tourism Authority. Information comes from <a href="https://discoversvg.com/">discoversvg.com</a>, government sources, local news and Wikipedia, checked October 2026. Schedules, phone numbers and event dates change, so confirm before you travel.</p>
+    <p>All illustrations are original. Map data &copy; OpenStreetMap contributors. Designed and built by Jody-Ann Trimmingham.</p>
+  </div>
+</footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="js/data/islands.js?v=20261021"></script>
+<script src="js/site.js?v=20261021"></script>
+<script src="js/data/places.js?v=20261021"></script>
+<script src="js/data/ferries.js?v=20261021"></script>
+<script src="js/data/festivals.js?v=20261021"></script>
+<script src="js/data/plans.js?v=20261021"></script>
+<script src="js/planner.js?v=20261021"></script>
+</body>
+</html>

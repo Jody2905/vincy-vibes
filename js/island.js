@@ -34,7 +34,7 @@
     sayEl.hidden = false;
   }
 
-  var links = [];
+  var links = ['<a href="planner.html?island=' + isl.id + '">Plan a day on ' + VV.esc(isl.name) + "</a>"];
   if (isl.taxis) {
     links.push('<a href="taxis.html?island=' + encodeURIComponent(isl.name) + '">Approved taxis on ' + VV.esc(isl.name) + "</a>");
   }

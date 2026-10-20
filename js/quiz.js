@@ -142,10 +142,11 @@
         '<ul class="res-hl">' + isl.highlights.slice(0, 3).map(function (h) { return "<li><strong>" + VV.esc(h[0]) + "</strong> " + VV.esc(h[1]) + "</li>"; }).join("") + "</ul>" +
         '<div class="res-actions">' +
           '<a class="btn btn-gold" href="index.html?sail=' + id + '#hop">Sail there on the map</a>' +
-          '<a class="btn" href="island.html?id=' + id + '">Explore ' + VV.esc(isl.name) + "</a>" +
+          '<a class="btn" href="planner.html?island=' + id + '">Plan a day there</a>' +
+          '<a class="btn btn-quiet" href="island.html?id=' + id + '">Explore ' + VV.esc(isl.name) + "</a>" +
           '<button type="button" class="btn btn-quiet" id="quiz-share">Share my result</button>' +
-          '<button type="button" class="btn btn-quiet" id="quiz-again">Take it again</button>' +
         "</div>" +
+        '<button type="button" class="quiz-back" id="quiz-again">Take the quiz again</button>' +
         '<p class="share-msg" id="share-msg" aria-live="polite"></p>' +
       "</div>";
     card.classList.remove("in"); void card.offsetWidth; card.classList.add("in");
